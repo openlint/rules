@@ -13,6 +13,10 @@ recommended: false
 severity: warn
 formats:
   - OpenAPI 3.x
+specs:
+  - OpenAPI 3.0
+  - OpenAPI 3.1
+  - OpenAPI 3.2
 functions:
   - truthy
 properties:

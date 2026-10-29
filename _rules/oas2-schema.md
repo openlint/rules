@@ -13,6 +13,8 @@ recommended: true
 severity: error
 formats:
   - OpenAPI 2.0 (Swagger)
+specs:
+  - OpenAPI 2.0
 functions:
   - oasDocumentSchema
 properties:

@@ -13,6 +13,8 @@ recommended: true
 severity: warn
 formats:
   - AsyncAPI 3.x
+specs:
+  - AsyncAPI 3.x
 functions:
   - pattern
 properties:

@@ -14,6 +14,9 @@ severity: info
 formats:
   - AsyncAPI 2.x
   - AsyncAPI 3.x
+specs:
+  - AsyncAPI 2.x
+  - AsyncAPI 3.x
 functions:
   - schema
 properties:

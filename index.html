@@ -11,6 +11,8 @@ summary: A registry of OpenLint rules. Search every rule in the built-in OpenAPI
   <label class="search"><span class="sr">Search rules</span><input id="q" type="search" placeholder="Search rules, e.g. operationId, https, enum" autocomplete="off"></label>
   <label><span>Property</span>
     <select id="property"><option value="">Any property</option>{% for p in props %}<option value="{{ p }}">{{ p }}</option>{% endfor %}</select></label>
+  <label><span>Spec</span>
+    <select id="spec"><option value="">Any spec</option><option>OpenAPI 2.0</option><option>OpenAPI 3.0</option><option>OpenAPI 3.1</option><option>OpenAPI 3.2</option><option>AsyncAPI 2.x</option><option>AsyncAPI 3.x</option><option>Arazzo 1.0</option></select></label>
   <label><span>Ruleset</span>
     <select id="ruleset"><option value="">All</option><option value="spectral:oas">spectral:oas</option><option value="spectral:asyncapi">spectral:asyncapi</option><option value="spectral:arazzo">spectral:arazzo</option><option value="specification">Specification</option><option value="learn">Learn</option></select></label>
   <label><span>Severity</span>
@@ -20,7 +22,7 @@ summary: A registry of OpenLint rules. Search every rule in the built-in OpenAPI
 <p class="muted count" id="count" aria-live="polite">{{ rules.size }} rules</p>
 
 <ul class="entries rules" id="rules">
-{% for r in rules %}<li data-props="{{ r.properties | join: ' ' }}" data-ruleset="{% if r.ruleset %}{{ r.ruleset }}{% else %}{{ r.source }}{% endif %}" data-severity="{{ r.severity }}" data-on="{{ r.recommended }}" data-text="{{ r.slug }} {{ r.description | escape | downcase }} {{ r.properties | join: ' ' | downcase }} {{ r.functions | join: ' ' | downcase }}">
+{% for r in rules %}<li data-props="{{ r.properties | join: ' ' }}" data-ruleset="{% if r.ruleset %}{{ r.ruleset }}{% else %}{{ r.source }}{% endif %}" data-specs="{{ r.specs | join: '|' }}" data-severity="{{ r.severity }}" data-on="{{ r.recommended }}" data-text="{{ r.slug }} {{ r.description | escape | downcase }} {{ r.properties | join: ' ' | downcase }} {{ r.functions | join: ' ' | downcase }}">
   <a class="name" href="{{ r.url }}"><code>{{ r.slug }}</code></a>
   <span class="tags"><span class="tag tag-{{ r.source }}">{% if r.ruleset %}{{ r.ruleset }}{% else %}{{ r.rulesetName }}{% endif %}</span> <span class="tag sev-{{ r.severity }}">{{ r.severity }}</span>{% unless r.recommended %} <span class="tag tag-off">off by default</span>{% endunless %}</span>
   <p>{{ r.description | escape }}</p>
@@ -33,12 +35,12 @@ summary: A registry of OpenLint rules. Search every rule in the built-in OpenAPI
 
 <script>
 (function () {
-  var ids = ['q', 'property', 'ruleset', 'severity', 'on'];
+  var ids = ['q', 'property', 'spec', 'ruleset', 'severity', 'on'];
   var el = {}; ids.forEach(function (k) { el[k] = document.getElementById(k); });
   var items = [].slice.call(document.querySelectorAll('#rules > li'));
   var params = new URLSearchParams(location.search);
   if (params.get('q')) el.q.value = params.get('q');
-  ['property', 'ruleset', 'severity'].forEach(function (k) { if (params.get(k)) el[k].value = params.get(k); });
+  ['property', 'spec', 'ruleset', 'severity'].forEach(function (k) { if (params.get(k)) el[k].value = params.get(k); });
   el.on.checked = params.get('on') === '1';
 
   function apply() {
@@ -48,6 +50,7 @@ summary: A registry of OpenLint rules. Search every rule in the built-in OpenAPI
       var d = li.dataset;
       var ok = q.every(function (w) { return d.text.indexOf(w) !== -1; })
         && (!el.property.value || (' ' + d.props + ' ').indexOf(' ' + el.property.value + ' ') !== -1)
+        && (!el.spec.value || ('|' + d.specs + '|').indexOf('|' + el.spec.value + '|') !== -1)
         && (!el.ruleset.value || d.ruleset === el.ruleset.value)
         && (!el.severity.value || d.severity === el.severity.value)
         && (!el.on.checked || d.on === 'true');
@@ -57,7 +60,7 @@ summary: A registry of OpenLint rules. Search every rule in the built-in OpenAPI
     document.getElementById('none').hidden = shown !== 0;
     var p = new URLSearchParams();
     if (el.q.value.trim()) p.set('q', el.q.value.trim());
-    ['property', 'ruleset', 'severity'].forEach(function (k) { if (el[k].value) p.set(k, el[k].value); });
+    ['property', 'spec', 'ruleset', 'severity'].forEach(function (k) { if (el[k].value) p.set(k, el[k].value); });
     if (el.on.checked) p.set('on', '1');
     var s = p.toString();
     history.replaceState(null, '', s ? '?' + s : location.pathname);

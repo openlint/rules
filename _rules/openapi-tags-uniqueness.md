@@ -17,6 +17,11 @@ formats:
   - OpenAPI 3.0.x
   - OpenAPI 3.1.x
   - OpenAPI 3.2.x
+specs:
+  - OpenAPI 2.0
+  - OpenAPI 3.0
+  - OpenAPI 3.1
+  - OpenAPI 3.2
 functions:
   - uniquenessTags
 properties:

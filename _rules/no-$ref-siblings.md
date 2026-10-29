@@ -14,6 +14,9 @@ severity: error
 formats:
   - OpenAPI 2.0 (Swagger)
   - OpenAPI 3.0.x
+specs:
+  - OpenAPI 2.0
+  - OpenAPI 3.0
 functions:
   - refSiblings
 properties:

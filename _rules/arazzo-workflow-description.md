@@ -13,6 +13,8 @@ recommended: true
 severity: warn
 formats:
   - Arazzo 1.0.x
+specs:
+  - Arazzo 1.0
 functions:
   - truthy
 properties:

@@ -17,6 +17,8 @@ recommended: true
 severity: warn
 formats:
   - OpenAPI 2.0 (Swagger)
+specs:
+  - OpenAPI 2.0
 functions:
   - oasSecurityDefined
 properties:

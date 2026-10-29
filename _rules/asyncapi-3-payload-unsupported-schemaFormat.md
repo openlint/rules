@@ -17,6 +17,8 @@ recommended: true
 severity: info
 formats:
   - AsyncAPI 3.x
+specs:
+  - AsyncAPI 3.x
 functions:
   - undefined
 properties:
