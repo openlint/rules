@@ -1,0 +1,18 @@
+title: OpenLint Rules
+description: A registry of OpenLint rules — every rule in the built-in rulesets, the specification and the documentation, each with its own page.
+url: https://rules.openlint.org
+
+collections:
+  rules:
+    output: true
+    permalink: /:name/
+
+exclude:
+  - README.md
+  - CNAME
+  - LICENSE
+  - tools
+  - sources
+  - package.json
+  - package-lock.json
+  - node_modules

@@ -1,0 +1,4548 @@
+{
+  "generated": "2026-10-29",
+  "openlint": "1.0.0",
+  "rulesets": "0.0.1",
+  "count": 138,
+  "rules": [
+    {
+      "slug": "arazzo-document-schema",
+      "source": "built-in",
+      "ruleset": "spectral:arazzo",
+      "rulesetName": "Arazzo",
+      "description": "Arazzo Document must be valid against the Arazzo schema.",
+      "message": "{{error}}",
+      "recommended": true,
+      "severity": "error",
+      "formats": [
+        "Arazzo 1.0.x"
+      ],
+      "functions": [
+        "arazzoDocumentSchema"
+      ],
+      "properties": [
+        "document"
+      ],
+      "given": "$",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/arazzo-rules/#arazzo-document-schema"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/arazzo/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/arazzo-document-schema/"
+    },
+    {
+      "slug": "arazzo-info-description",
+      "source": "built-in",
+      "ruleset": "spectral:arazzo",
+      "rulesetName": "Arazzo",
+      "description": "Info \"description\" should be present and non-empty string.",
+      "message": null,
+      "recommended": true,
+      "severity": "warn",
+      "formats": [
+        "Arazzo 1.0.x"
+      ],
+      "functions": [
+        "truthy"
+      ],
+      "properties": [
+        "description"
+      ],
+      "given": "$",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/arazzo-rules/#arazzo-info-description"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/arazzo/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/arazzo-info-description/"
+    },
+    {
+      "slug": "arazzo-info-summary",
+      "source": "built-in",
+      "ruleset": "spectral:arazzo",
+      "rulesetName": "Arazzo",
+      "description": "Info \"summary\" is recommended be present and be a non-empty string.",
+      "message": null,
+      "recommended": true,
+      "severity": "hint",
+      "formats": [
+        "Arazzo 1.0.x"
+      ],
+      "functions": [
+        "truthy"
+      ],
+      "properties": [
+        "summary"
+      ],
+      "given": "$",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/arazzo-rules/#arazzo-info-summary"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/arazzo/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/arazzo-info-summary/"
+    },
+    {
+      "slug": "arazzo-no-script-tags-in-markdown",
+      "source": "built-in",
+      "ruleset": "spectral:arazzo",
+      "rulesetName": "Arazzo",
+      "description": "Markdown descriptions must not have \"<script>\" tags.",
+      "message": null,
+      "recommended": true,
+      "severity": "warn",
+      "formats": [
+        "Arazzo 1.0.x"
+      ],
+      "functions": [
+        "pattern"
+      ],
+      "properties": [
+        "description",
+        "title"
+      ],
+      "given": "$..[description,title]",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/arazzo-rules/#arazzo-no-script-tags-in-markdown"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/arazzo/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/arazzo-no-script-tags-in-markdown/"
+    },
+    {
+      "slug": "arazzo-source-descriptions-type",
+      "source": "built-in",
+      "ruleset": "spectral:arazzo",
+      "rulesetName": "Arazzo",
+      "description": "Source Description \"type\" should be present.",
+      "message": null,
+      "recommended": true,
+      "severity": "warn",
+      "formats": [
+        "Arazzo 1.0.x"
+      ],
+      "functions": [
+        "truthy"
+      ],
+      "properties": [
+        "type"
+      ],
+      "given": "$.sourceDescriptions[*]",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/arazzo-rules/#arazzo-source-descriptions-type"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/arazzo/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/arazzo-source-descriptions-type/"
+    },
+    {
+      "slug": "arazzo-step-description",
+      "source": "built-in",
+      "ruleset": "spectral:arazzo",
+      "rulesetName": "Arazzo",
+      "description": "Step \"description\" should be present and non-empty string.",
+      "message": null,
+      "recommended": true,
+      "severity": "warn",
+      "formats": [
+        "Arazzo 1.0.x"
+      ],
+      "functions": [
+        "truthy"
+      ],
+      "properties": [
+        "description"
+      ],
+      "given": "$.workflows[*].steps[*]",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/arazzo-rules/#arazzo-step-description"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/arazzo/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/arazzo-step-description/"
+    },
+    {
+      "slug": "arazzo-step-failure-actions-validation",
+      "source": "built-in",
+      "ruleset": "spectral:arazzo",
+      "rulesetName": "Arazzo",
+      "description": "Every failure action must have a unique \"name\", and the fields \"workflowId\" and \"stepId\" are mutually exclusive.",
+      "message": "{{error}}",
+      "recommended": true,
+      "severity": "error",
+      "formats": [
+        "Arazzo 1.0.x"
+      ],
+      "functions": [
+        "arazzoStepFailureActionsValidation"
+      ],
+      "properties": [
+        "onFailure"
+      ],
+      "given": "$",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/arazzo-rules/#arazzo-step-failure-actions-validation"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/arazzo/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/arazzo-step-failure-actions-validation/"
+    },
+    {
+      "slug": "arazzo-step-operationPath",
+      "source": "built-in",
+      "ruleset": "spectral:arazzo",
+      "rulesetName": "Arazzo",
+      "description": "It is recommended to use \"operationId\" rather than \"operationPath\".",
+      "message": null,
+      "recommended": true,
+      "severity": "hint",
+      "formats": [
+        "Arazzo 1.0.x"
+      ],
+      "functions": [
+        "falsy"
+      ],
+      "properties": [
+        "operationPath"
+      ],
+      "given": "$.workflows[*].steps[*]",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/arazzo-rules/#arazzo-step-operationPath"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/arazzo/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/arazzo-step-operationPath/"
+    },
+    {
+      "slug": "arazzo-step-output-validation",
+      "source": "built-in",
+      "ruleset": "spectral:arazzo",
+      "rulesetName": "Arazzo",
+      "description": "Every step output must have unique name and its value must be a valid runtime expression.",
+      "message": "{{error}}",
+      "recommended": true,
+      "severity": "error",
+      "formats": [
+        "Arazzo 1.0.x"
+      ],
+      "functions": [
+        "arazzoStepOutputNamesValidation"
+      ],
+      "properties": [
+        "outputs"
+      ],
+      "given": "$",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/arazzo-rules/#arazzo-step-output-validation"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/arazzo/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/arazzo-step-output-validation/"
+    },
+    {
+      "slug": "arazzo-step-parameters-validation",
+      "source": "built-in",
+      "ruleset": "spectral:arazzo",
+      "rulesetName": "Arazzo",
+      "description": "Step parameters and workflow parameters must valid.",
+      "message": "{{error}}",
+      "recommended": true,
+      "severity": "error",
+      "formats": [
+        "Arazzo 1.0.x"
+      ],
+      "functions": [
+        "arazzoStepParametersValidation"
+      ],
+      "properties": [
+        "parameters"
+      ],
+      "given": "$",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/arazzo-rules/#arazzo-step-parameters-validation"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/arazzo/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/arazzo-step-parameters-validation/"
+    },
+    {
+      "slug": "arazzo-step-request-body-validation",
+      "source": "built-in",
+      "ruleset": "spectral:arazzo",
+      "rulesetName": "Arazzo",
+      "description": "Every step request body must have a valid `contentType` and use of runtime expressions.",
+      "message": null,
+      "recommended": true,
+      "severity": "error",
+      "formats": [
+        "Arazzo 1.0.x"
+      ],
+      "functions": [
+        "arazzoStepRequestBodyValidation"
+      ],
+      "properties": [
+        "requestBody"
+      ],
+      "given": "$",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/arazzo-rules/#arazzo-step-request-body-validation"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/arazzo/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/arazzo-step-request-body-validation/"
+    },
+    {
+      "slug": "arazzo-step-stepId",
+      "source": "built-in",
+      "ruleset": "spectral:arazzo",
+      "rulesetName": "Arazzo",
+      "description": "Step \"stepId\" should follow the pattern \"^[A-Za-z0-9_\\-]+$\".",
+      "message": null,
+      "recommended": true,
+      "severity": "warn",
+      "formats": [
+        "Arazzo 1.0.x"
+      ],
+      "functions": [
+        "pattern"
+      ],
+      "properties": [
+        "stepId"
+      ],
+      "given": "$.workflows[*].steps[*]",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/arazzo-rules/#arazzo-step-stepId"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/arazzo/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/arazzo-step-stepId/"
+    },
+    {
+      "slug": "arazzo-step-success-actions-validation",
+      "source": "built-in",
+      "ruleset": "spectral:arazzo",
+      "rulesetName": "Arazzo",
+      "description": "Every success action must have a unique \"name\", and the fields \"workflowId\" and \"stepId\" are mutually exclusive.",
+      "message": "{{error}}",
+      "recommended": true,
+      "severity": "error",
+      "formats": [
+        "Arazzo 1.0.x"
+      ],
+      "functions": [
+        "arazzoStepSuccessActionsValidation"
+      ],
+      "properties": [
+        "onSuccess"
+      ],
+      "given": "$",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/arazzo-rules/#arazzo-step-success-actions-validation"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/arazzo/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/arazzo-step-success-actions-validation/"
+    },
+    {
+      "slug": "arazzo-step-success-criteria-validation",
+      "source": "built-in",
+      "ruleset": "spectral:arazzo",
+      "rulesetName": "Arazzo",
+      "description": "Every success criteria must have a valid context, conditions, and types.",
+      "message": "{{error}}",
+      "recommended": true,
+      "severity": "error",
+      "formats": [
+        "Arazzo 1.0.x"
+      ],
+      "functions": [
+        "arazzoStepSuccessCriteriaValidation"
+      ],
+      "properties": [
+        "workflows"
+      ],
+      "given": "$.workflows[*]",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/arazzo-rules/#arazzo-step-success-criteria-validation"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/arazzo/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/arazzo-step-success-criteria-validation/"
+    },
+    {
+      "slug": "arazzo-step-validation",
+      "source": "built-in",
+      "ruleset": "spectral:arazzo",
+      "rulesetName": "Arazzo",
+      "description": "Every step must have a valid \"stepId\" and an valid \"operationId\" or \"operationPath\" or \"workflowId\".",
+      "message": null,
+      "recommended": true,
+      "severity": "error",
+      "formats": [
+        "Arazzo 1.0.x"
+      ],
+      "functions": [
+        "arazzoStepValidation"
+      ],
+      "properties": [
+        "steps"
+      ],
+      "given": "$",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/arazzo-rules/#arazzo-step-validation"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/arazzo/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/arazzo-step-validation/"
+    },
+    {
+      "slug": "arazzo-workflow-depends-on-validation",
+      "source": "built-in",
+      "ruleset": "spectral:arazzo",
+      "rulesetName": "Arazzo",
+      "description": "Every workflow dependency must be valid.",
+      "message": null,
+      "recommended": true,
+      "severity": "error",
+      "formats": [
+        "Arazzo 1.0.x"
+      ],
+      "functions": [
+        "arazzoWorkflowDependsOnValidation"
+      ],
+      "properties": [
+        "dependsOn"
+      ],
+      "given": "$",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/arazzo-rules/#arazzo-workflow-depends-on-validation"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/arazzo/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/arazzo-workflow-depends-on-validation/"
+    },
+    {
+      "slug": "arazzo-workflow-description",
+      "source": "built-in",
+      "ruleset": "spectral:arazzo",
+      "rulesetName": "Arazzo",
+      "description": "Workflow \"description\" should be present and non-empty string.",
+      "message": null,
+      "recommended": true,
+      "severity": "warn",
+      "formats": [
+        "Arazzo 1.0.x"
+      ],
+      "functions": [
+        "truthy"
+      ],
+      "properties": [
+        "description"
+      ],
+      "given": "$.workflows[*]",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/arazzo-rules/#arazzo-workflow-description"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/arazzo/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/arazzo-workflow-description/"
+    },
+    {
+      "slug": "arazzo-workflow-output-validation",
+      "source": "built-in",
+      "ruleset": "spectral:arazzo",
+      "rulesetName": "Arazzo",
+      "description": "Every workflow output must have unique name and its value must be a valid runtime expression.",
+      "message": "{{error}}",
+      "recommended": true,
+      "severity": "error",
+      "formats": [
+        "Arazzo 1.0.x"
+      ],
+      "functions": [
+        "arazzoWorkflowOutputNamesValidation"
+      ],
+      "properties": [
+        "outputs"
+      ],
+      "given": "$",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/arazzo-rules/#arazzo-workflow-output-validation"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/arazzo/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/arazzo-workflow-output-validation/"
+    },
+    {
+      "slug": "arazzo-workflow-stepId-unique",
+      "source": "built-in",
+      "ruleset": "spectral:arazzo",
+      "rulesetName": "Arazzo",
+      "description": "Every step must have unique \"stepId\".",
+      "message": "{{error}}",
+      "recommended": true,
+      "severity": "error",
+      "formats": [
+        "Arazzo 1.0.x"
+      ],
+      "functions": [
+        "arazzoStepIdUniqueness"
+      ],
+      "properties": [
+        "workflows"
+      ],
+      "given": "$.workflows[*]",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/arazzo-rules/#arazzo-workflow-stepId-unique"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/arazzo/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/arazzo-workflow-stepId-unique/"
+    },
+    {
+      "slug": "arazzo-workflow-summary",
+      "source": "built-in",
+      "ruleset": "spectral:arazzo",
+      "rulesetName": "Arazzo",
+      "description": "Workflow \"summary\" should be present and non-empty string.",
+      "message": null,
+      "recommended": true,
+      "severity": "hint",
+      "formats": [
+        "Arazzo 1.0.x"
+      ],
+      "functions": [
+        "truthy"
+      ],
+      "properties": [
+        "summary"
+      ],
+      "given": "$.workflows[*]",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/arazzo-rules/#arazzo-workflow-summary"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/arazzo/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/arazzo-workflow-summary/"
+    },
+    {
+      "slug": "arazzo-workflow-workflowId",
+      "source": "built-in",
+      "ruleset": "spectral:arazzo",
+      "rulesetName": "Arazzo",
+      "description": "Workflow \"workflowId\" should follow the pattern \"^[A-Za-z0-9_\\-]+$\".",
+      "message": null,
+      "recommended": true,
+      "severity": "warn",
+      "formats": [
+        "Arazzo 1.0.x"
+      ],
+      "functions": [
+        "pattern"
+      ],
+      "properties": [
+        "workflowId"
+      ],
+      "given": "$.workflows[*]",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/arazzo-rules/#arazzo-workflow-workflowId"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/arazzo/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/arazzo-workflow-workflowId/"
+    },
+    {
+      "slug": "arazzo-workflowId-unique",
+      "source": "built-in",
+      "ruleset": "spectral:arazzo",
+      "rulesetName": "Arazzo",
+      "description": "Every workflow must have unique \"workflowId\".",
+      "message": "{{error}}",
+      "recommended": true,
+      "severity": "error",
+      "formats": [
+        "Arazzo 1.0.x"
+      ],
+      "functions": [
+        "arazzoWorkflowIdUniqueness"
+      ],
+      "properties": [
+        "workflowId"
+      ],
+      "given": "$",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/arazzo-rules/#arazzo-workflowId-unique"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/arazzo/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/arazzo-workflowId-unique/"
+    },
+    {
+      "slug": "array-items",
+      "source": "built-in",
+      "ruleset": "spectral:oas",
+      "rulesetName": "OpenAPI",
+      "description": "",
+      "message": "Schemas with \"type: array\", require a sibling \"items\" field",
+      "recommended": true,
+      "severity": "error",
+      "formats": [
+        "OpenAPI 2.0 (Swagger)",
+        "OpenAPI 3.x",
+        "OpenAPI 3.0.x",
+        "OpenAPI 3.1.x",
+        "OpenAPI 3.2.x"
+      ],
+      "functions": [
+        "truthy"
+      ],
+      "properties": [
+        "items"
+      ],
+      "given": "#ArrayProperties",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/openapi-rules/#array-items"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/oas/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/array-items/"
+    },
+    {
+      "slug": "asyncapi-3-channel-no-empty-parameter",
+      "source": "built-in",
+      "ruleset": "spectral:asyncapi",
+      "rulesetName": "AsyncAPI",
+      "description": "Channel address must not have empty parameter substitution pattern.",
+      "message": null,
+      "recommended": true,
+      "severity": "warn",
+      "formats": [
+        "AsyncAPI 3.x"
+      ],
+      "functions": [
+        "pattern"
+      ],
+      "properties": [
+        "address"
+      ],
+      "given": "$.channels.*",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/asyncapi-rules/#asyncapi-3-channel-no-empty-parameter"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/asyncapi/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/asyncapi-3-channel-no-empty-parameter/"
+    },
+    {
+      "slug": "asyncapi-3-channel-no-query-nor-fragment",
+      "source": "built-in",
+      "ruleset": "spectral:asyncapi",
+      "rulesetName": "AsyncAPI",
+      "description": "Channel address must not include query (\"?\") or fragment (\"#\") delimiter.",
+      "message": null,
+      "recommended": true,
+      "severity": "warn",
+      "formats": [
+        "AsyncAPI 3.x"
+      ],
+      "functions": [
+        "pattern"
+      ],
+      "properties": [
+        "address"
+      ],
+      "given": "$.channels.*",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/asyncapi-rules/#asyncapi-3-channel-no-query-nor-fragment"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/asyncapi/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/asyncapi-3-channel-no-query-nor-fragment/"
+    },
+    {
+      "slug": "asyncapi-3-channel-no-trailing-slash",
+      "source": "built-in",
+      "ruleset": "spectral:asyncapi",
+      "rulesetName": "AsyncAPI",
+      "description": "Channel address must not end with slash.",
+      "message": null,
+      "recommended": true,
+      "severity": "warn",
+      "formats": [
+        "AsyncAPI 3.x"
+      ],
+      "functions": [
+        "pattern"
+      ],
+      "properties": [
+        "address"
+      ],
+      "given": "$.channels.*",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/asyncapi-rules/#asyncapi-3-channel-no-trailing-slash"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/asyncapi/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/asyncapi-3-channel-no-trailing-slash/"
+    },
+    {
+      "slug": "asyncapi-3-channel-servers",
+      "source": "built-in",
+      "ruleset": "spectral:asyncapi",
+      "rulesetName": "AsyncAPI",
+      "description": "Channel servers must be defined in the \"servers\" object.",
+      "message": null,
+      "recommended": true,
+      "severity": "error",
+      "formats": [
+        "AsyncAPI 3.x"
+      ],
+      "functions": [
+        "pattern"
+      ],
+      "properties": [
+        "$ref"
+      ],
+      "given": "$.channels.*",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/asyncapi-rules/#asyncapi-3-channel-servers"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/asyncapi/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/asyncapi-3-channel-servers/"
+    },
+    {
+      "slug": "asyncapi-3-document-resolved",
+      "source": "built-in",
+      "ruleset": "spectral:asyncapi",
+      "rulesetName": "AsyncAPI",
+      "description": "Checking if the AsyncAPI v3 document has valid structure after resolving references.",
+      "message": "{{error}}",
+      "recommended": true,
+      "severity": "error",
+      "formats": [
+        "AsyncAPI 3.x"
+      ],
+      "functions": [
+        "function"
+      ],
+      "properties": [
+        "document"
+      ],
+      "given": "$",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/asyncapi-rules/#asyncapi-3-document-resolved"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/asyncapi/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/asyncapi-3-document-resolved/"
+    },
+    {
+      "slug": "asyncapi-3-document-unresolved",
+      "source": "built-in",
+      "ruleset": "spectral:asyncapi",
+      "rulesetName": "AsyncAPI",
+      "description": "Checking if the AsyncAPI v3 document has valid structure before resolving references.",
+      "message": "{{error}}",
+      "recommended": true,
+      "severity": "error",
+      "formats": [
+        "AsyncAPI 3.x"
+      ],
+      "functions": [
+        "function"
+      ],
+      "properties": [
+        "document"
+      ],
+      "given": "$",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/asyncapi-rules/#asyncapi-3-document-unresolved"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/asyncapi/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/asyncapi-3-document-unresolved/"
+    },
+    {
+      "slug": "asyncapi-3-headers-schema-type-object",
+      "source": "built-in",
+      "ruleset": "spectral:asyncapi",
+      "rulesetName": "AsyncAPI",
+      "description": "Headers schema type must be \"object\".",
+      "message": "Headers schema type must be \"object\" ({{error}}).",
+      "recommended": true,
+      "severity": "error",
+      "formats": [
+        "AsyncAPI 3.x"
+      ],
+      "functions": [
+        "schema"
+      ],
+      "properties": [
+        "headers"
+      ],
+      "given": [
+        "$.components.messageTraits.*.headers",
+        "$.components.messages.*.headers",
+        "$.channels.*.messages.*.headers",
+        "$.channels.*.messages.*.traits[*].headers"
+      ],
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/asyncapi-rules/#asyncapi-3-headers-schema-type-object"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/asyncapi/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/asyncapi-3-headers-schema-type-object/"
+    },
+    {
+      "slug": "asyncapi-3-operation-description",
+      "source": "built-in",
+      "ruleset": "spectral:asyncapi",
+      "rulesetName": "AsyncAPI",
+      "description": "Operation \"description\" must be present and non-empty string.",
+      "message": null,
+      "recommended": true,
+      "severity": "warn",
+      "formats": [
+        "AsyncAPI 3.x"
+      ],
+      "functions": [
+        "truthy"
+      ],
+      "properties": [
+        "description"
+      ],
+      "given": "$.operations.*",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/asyncapi-rules/#asyncapi-3-operation-description"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/asyncapi/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/asyncapi-3-operation-description/"
+    },
+    {
+      "slug": "asyncapi-3-operation-security",
+      "source": "built-in",
+      "ruleset": "spectral:asyncapi",
+      "rulesetName": "AsyncAPI",
+      "description": "Operation have to reference a defined security schemes.",
+      "message": "{{error}}",
+      "recommended": true,
+      "severity": "error",
+      "formats": [
+        "AsyncAPI 3.x"
+      ],
+      "functions": [
+        "asyncApiSecurity"
+      ],
+      "properties": [
+        "security"
+      ],
+      "given": "$.operations.*.security.*",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/asyncapi-rules/#asyncapi-3-operation-security"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/asyncapi/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/asyncapi-3-operation-security/"
+    },
+    {
+      "slug": "asyncapi-3-payload-unsupported-schemaFormat",
+      "source": "built-in",
+      "ruleset": "spectral:asyncapi",
+      "rulesetName": "AsyncAPI",
+      "description": "Message schema validation is only supported with default unspecified \"schemaFormat\".",
+      "message": null,
+      "recommended": true,
+      "severity": "info",
+      "formats": [
+        "AsyncAPI 3.x"
+      ],
+      "functions": [
+        "undefined"
+      ],
+      "properties": [
+        "schemaFormat"
+      ],
+      "given": [
+        "$.components.messages.*.payload",
+        "$.channels.*.messages.*.payload"
+      ],
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/asyncapi-rules/#asyncapi-3-payload-unsupported-schemaFormat"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/asyncapi/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/asyncapi-3-payload-unsupported-schemaFormat/"
+    },
+    {
+      "slug": "asyncapi-3-server-no-empty-variable",
+      "source": "built-in",
+      "ruleset": "spectral:asyncapi",
+      "rulesetName": "AsyncAPI",
+      "description": "Server host and pathname must not have empty variable substitution pattern.",
+      "message": null,
+      "recommended": true,
+      "severity": "warn",
+      "formats": [
+        "AsyncAPI 3.x"
+      ],
+      "functions": [
+        "pattern"
+      ],
+      "properties": [
+        "host",
+        "pathname"
+      ],
+      "given": [
+        "$.servers[*].host",
+        "$.servers[*].pathname"
+      ],
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/asyncapi-rules/#asyncapi-3-server-no-empty-variable"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/asyncapi/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/asyncapi-3-server-no-empty-variable/"
+    },
+    {
+      "slug": "asyncapi-3-server-no-trailing-slash",
+      "source": "built-in",
+      "ruleset": "spectral:asyncapi",
+      "rulesetName": "AsyncAPI",
+      "description": "Server host must not end with slash.",
+      "message": null,
+      "recommended": true,
+      "severity": "warn",
+      "formats": [
+        "AsyncAPI 3.x"
+      ],
+      "functions": [
+        "pattern"
+      ],
+      "properties": [
+        "host"
+      ],
+      "given": "$.servers.*.host",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/asyncapi-rules/#asyncapi-3-server-no-trailing-slash"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/asyncapi/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/asyncapi-3-server-no-trailing-slash/"
+    },
+    {
+      "slug": "asyncapi-3-server-not-example-com",
+      "source": "built-in",
+      "ruleset": "spectral:asyncapi",
+      "rulesetName": "AsyncAPI",
+      "description": "Server host must not point at example.com.",
+      "message": null,
+      "recommended": false,
+      "severity": "warn",
+      "formats": [
+        "AsyncAPI 3.x"
+      ],
+      "functions": [
+        "pattern"
+      ],
+      "properties": [
+        "host"
+      ],
+      "given": "$.servers.*.host",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/asyncapi-rules/#asyncapi-3-server-not-example-com"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/asyncapi/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/asyncapi-3-server-not-example-com/"
+    },
+    {
+      "slug": "asyncapi-3-tag-description",
+      "source": "built-in",
+      "ruleset": "spectral:asyncapi",
+      "rulesetName": "AsyncAPI",
+      "description": "Tag object must have \"description\".",
+      "message": null,
+      "recommended": false,
+      "severity": "warn",
+      "formats": [
+        "AsyncAPI 3.x"
+      ],
+      "functions": [
+        "truthy"
+      ],
+      "properties": [
+        "description"
+      ],
+      "given": "$.info.tags[*]",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/asyncapi-rules/#asyncapi-3-tag-description"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/asyncapi/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/asyncapi-3-tag-description/"
+    },
+    {
+      "slug": "asyncapi-3-tags",
+      "source": "built-in",
+      "ruleset": "spectral:asyncapi",
+      "rulesetName": "AsyncAPI",
+      "description": "AsyncAPI document must have non-empty \"tags\" array.",
+      "message": null,
+      "recommended": true,
+      "severity": "warn",
+      "formats": [
+        "AsyncAPI 3.x"
+      ],
+      "functions": [
+        "truthy"
+      ],
+      "properties": [
+        "tags"
+      ],
+      "given": [
+        "$.info"
+      ],
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/asyncapi-rules/#asyncapi-3-tags"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/asyncapi/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/asyncapi-3-tags/"
+    },
+    {
+      "slug": "asyncapi-3-tags-alphabetical",
+      "source": "built-in",
+      "ruleset": "spectral:asyncapi",
+      "rulesetName": "AsyncAPI",
+      "description": "AsyncAPI object must have alphabetical \"tags\".",
+      "message": null,
+      "recommended": false,
+      "severity": "warn",
+      "formats": [
+        "AsyncAPI 3.x"
+      ],
+      "functions": [
+        "alphabetical"
+      ],
+      "properties": [
+        "tags"
+      ],
+      "given": "$.info",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/asyncapi-rules/#asyncapi-3-tags-alphabetical"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/asyncapi/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/asyncapi-3-tags-alphabetical/"
+    },
+    {
+      "slug": "asyncapi-3-tags-uniqueness",
+      "source": "built-in",
+      "ruleset": "spectral:asyncapi",
+      "rulesetName": "AsyncAPI",
+      "description": "Each tag must have a unique name.",
+      "message": "{{error}}",
+      "recommended": true,
+      "severity": "error",
+      "formats": [
+        "AsyncAPI 3.x"
+      ],
+      "functions": [
+        "uniquenessTags"
+      ],
+      "properties": [
+        "tags"
+      ],
+      "given": [
+        "$.info.tags",
+        "$.servers.*.tags",
+        "$.components.servers.*.tags",
+        "$.operations.*.tags",
+        "$.components.operations.*.tags",
+        "$.operations.*.traits.*.tags",
+        "$.components.operations.traits.*.tags",
+        "$.components.operationTraits.*.tags",
+        "$.channels.*.messages.*.tags",
+        "$.components.channels.*.messages.tags",
+        "$.components.messages.*.tags",
+        "$.channels.*..messages.*.traits.*.tags",
+        "$.components.channels.*.messages.*.traits.*.tags",
+        "$.components.messages.*.traits.*.tags",
+        "$.components.messageTraits.*.tags"
+      ],
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/asyncapi-rules/#asyncapi-3-tags-uniqueness"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/asyncapi/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/asyncapi-3-tags-uniqueness/"
+    },
+    {
+      "slug": "asyncapi-channel-no-empty-parameter",
+      "source": "built-in",
+      "ruleset": "spectral:asyncapi",
+      "rulesetName": "AsyncAPI",
+      "description": "Channel path must not have empty parameter substitution pattern.",
+      "message": null,
+      "recommended": true,
+      "severity": "warn",
+      "formats": [
+        "AsyncAPI 2.x"
+      ],
+      "functions": [
+        "pattern"
+      ],
+      "properties": [
+        "channels"
+      ],
+      "given": "$.channels",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/asyncapi-rules/#asyncapi-channel-no-empty-parameter"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/asyncapi/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/asyncapi-channel-no-empty-parameter/"
+    },
+    {
+      "slug": "asyncapi-channel-no-query-nor-fragment",
+      "source": "built-in",
+      "ruleset": "spectral:asyncapi",
+      "rulesetName": "AsyncAPI",
+      "description": "Channel path must not include query (\"?\") or fragment (\"#\") delimiter.",
+      "message": null,
+      "recommended": true,
+      "severity": "warn",
+      "formats": [
+        "AsyncAPI 2.x"
+      ],
+      "functions": [
+        "pattern"
+      ],
+      "properties": [
+        "channels"
+      ],
+      "given": "$.channels",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/asyncapi-rules/#asyncapi-channel-no-query-nor-fragment"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/asyncapi/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/asyncapi-channel-no-query-nor-fragment/"
+    },
+    {
+      "slug": "asyncapi-channel-no-trailing-slash",
+      "source": "built-in",
+      "ruleset": "spectral:asyncapi",
+      "rulesetName": "AsyncAPI",
+      "description": "Channel path must not end with slash.",
+      "message": null,
+      "recommended": true,
+      "severity": "warn",
+      "formats": [
+        "AsyncAPI 2.x"
+      ],
+      "functions": [
+        "pattern"
+      ],
+      "properties": [
+        "channels"
+      ],
+      "given": "$.channels",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/asyncapi-rules/#asyncapi-channel-no-trailing-slash"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/asyncapi/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/asyncapi-channel-no-trailing-slash/"
+    },
+    {
+      "slug": "asyncapi-channel-parameters",
+      "source": "built-in",
+      "ruleset": "spectral:asyncapi",
+      "rulesetName": "AsyncAPI",
+      "description": "Channel parameters must be defined and there must be no redundant parameters.",
+      "message": "{{error}}",
+      "recommended": true,
+      "severity": "error",
+      "formats": [
+        "AsyncAPI 2.x",
+        "AsyncAPI 3.x"
+      ],
+      "functions": [
+        "asyncApiChannelParameters"
+      ],
+      "properties": [
+        "channels"
+      ],
+      "given": [
+        "$.channels.*",
+        "$.components.channels.*"
+      ],
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/asyncapi-rules/#asyncapi-channel-parameters"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/asyncapi/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/asyncapi-channel-parameters/"
+    },
+    {
+      "slug": "asyncapi-channel-servers",
+      "source": "built-in",
+      "ruleset": "spectral:asyncapi",
+      "rulesetName": "AsyncAPI",
+      "description": "Channel servers must be defined in the \"servers\" object.",
+      "message": "{{error}}",
+      "recommended": true,
+      "severity": "error",
+      "formats": [
+        "AsyncAPI 2.x"
+      ],
+      "functions": [
+        "asyncApi2ChannelServers"
+      ],
+      "properties": [
+        "servers"
+      ],
+      "given": "$",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/asyncapi-rules/#asyncapi-channel-servers"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/asyncapi/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/asyncapi-channel-servers/"
+    },
+    {
+      "slug": "asyncapi-headers-schema-type-object",
+      "source": "built-in",
+      "ruleset": "spectral:asyncapi",
+      "rulesetName": "AsyncAPI",
+      "description": "Headers schema type must be \"object\".",
+      "message": "Headers schema type must be \"object\" ({{error}}).",
+      "recommended": true,
+      "severity": "error",
+      "formats": [
+        "AsyncAPI 2.x"
+      ],
+      "functions": [
+        "schema"
+      ],
+      "properties": [
+        "headers"
+      ],
+      "given": [
+        "$.components.messageTraits.*.headers",
+        "$.components.messages.*.headers",
+        "$.channels.*.[publish,subscribe].message.headers",
+        "$.channels.*.[publish,subscribe].message.traits[*].headers"
+      ],
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/asyncapi-rules/#asyncapi-headers-schema-type-object"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/asyncapi/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/asyncapi-headers-schema-type-object/"
+    },
+    {
+      "slug": "asyncapi-info-contact",
+      "source": "built-in",
+      "ruleset": "spectral:asyncapi",
+      "rulesetName": "AsyncAPI",
+      "description": "Info object must have \"contact\" object.",
+      "message": null,
+      "recommended": true,
+      "severity": "warn",
+      "formats": [
+        "AsyncAPI 2.x",
+        "AsyncAPI 3.x"
+      ],
+      "functions": [
+        "truthy"
+      ],
+      "properties": [
+        "contact"
+      ],
+      "given": "$",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/asyncapi-rules/#asyncapi-info-contact"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/asyncapi/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/asyncapi-info-contact/"
+    },
+    {
+      "slug": "asyncapi-info-contact-properties",
+      "source": "built-in",
+      "ruleset": "spectral:asyncapi",
+      "rulesetName": "AsyncAPI",
+      "description": "Contact object must have \"name\", \"url\" and \"email\".",
+      "message": null,
+      "recommended": true,
+      "severity": "warn",
+      "formats": [
+        "AsyncAPI 2.x",
+        "AsyncAPI 3.x"
+      ],
+      "functions": [
+        "truthy"
+      ],
+      "properties": [
+        "email",
+        "name",
+        "url"
+      ],
+      "given": "$.info.contact",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/asyncapi-rules/#asyncapi-info-contact-properties"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/asyncapi/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/asyncapi-info-contact-properties/"
+    },
+    {
+      "slug": "asyncapi-info-description",
+      "source": "built-in",
+      "ruleset": "spectral:asyncapi",
+      "rulesetName": "AsyncAPI",
+      "description": "Info \"description\" must be present and non-empty string.",
+      "message": null,
+      "recommended": true,
+      "severity": "warn",
+      "formats": [
+        "AsyncAPI 2.x",
+        "AsyncAPI 3.x"
+      ],
+      "functions": [
+        "truthy"
+      ],
+      "properties": [
+        "description"
+      ],
+      "given": "$",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/asyncapi-rules/#asyncapi-info-description"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/asyncapi/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/asyncapi-info-description/"
+    },
+    {
+      "slug": "asyncapi-info-license",
+      "source": "built-in",
+      "ruleset": "spectral:asyncapi",
+      "rulesetName": "AsyncAPI",
+      "description": "Info object must have \"license\" object.",
+      "message": null,
+      "recommended": true,
+      "severity": "warn",
+      "formats": [
+        "AsyncAPI 2.x",
+        "AsyncAPI 3.x"
+      ],
+      "functions": [
+        "truthy"
+      ],
+      "properties": [
+        "license"
+      ],
+      "given": "$",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/asyncapi-rules/#asyncapi-info-license"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/asyncapi/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/asyncapi-info-license/"
+    },
+    {
+      "slug": "asyncapi-info-license-url",
+      "source": "built-in",
+      "ruleset": "spectral:asyncapi",
+      "rulesetName": "AsyncAPI",
+      "description": "License object must include \"url\".",
+      "message": null,
+      "recommended": false,
+      "severity": "warn",
+      "formats": [
+        "AsyncAPI 2.x",
+        "AsyncAPI 3.x"
+      ],
+      "functions": [
+        "truthy"
+      ],
+      "properties": [
+        "url"
+      ],
+      "given": "$",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/asyncapi-rules/#asyncapi-info-license-url"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/asyncapi/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/asyncapi-info-license-url/"
+    },
+    {
+      "slug": "asyncapi-latest-version",
+      "source": "built-in",
+      "ruleset": "spectral:asyncapi",
+      "rulesetName": "AsyncAPI",
+      "description": "Checking if the AsyncAPI document is using the latest version.",
+      "message": "The latest version is not used. You should update to the \"3.1.0\" version.",
+      "recommended": true,
+      "severity": "info",
+      "formats": [
+        "AsyncAPI 2.x",
+        "AsyncAPI 3.x"
+      ],
+      "functions": [
+        "schema"
+      ],
+      "properties": [
+        "asyncapi"
+      ],
+      "given": "$.asyncapi",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/asyncapi-rules/#asyncapi-latest-version"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/asyncapi/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/asyncapi-latest-version/"
+    },
+    {
+      "slug": "asyncapi-message-examples",
+      "source": "built-in",
+      "ruleset": "spectral:asyncapi",
+      "rulesetName": "AsyncAPI",
+      "description": "Examples of message object should follow by \"payload\" and \"headers\" schemas.",
+      "message": "{{error}}",
+      "recommended": true,
+      "severity": "error",
+      "formats": [
+        "AsyncAPI 2.x"
+      ],
+      "functions": [
+        "asyncApi2MessageExamplesValidation"
+      ],
+      "properties": [
+        "message",
+        "messageTraits",
+        "messages",
+        "oneOf",
+        "traits"
+      ],
+      "given": [
+        "$.channels.*.[publish,subscribe].message",
+        "$.channels.*.[publish,subscribe].message.oneOf.*",
+        "$.components.channels.*.[publish,subscribe].message",
+        "$.components.channels.*.[publish,subscribe].message.oneOf.*",
+        "$.components.messages.*",
+        "$.channels.*.[publish,subscribe].message.traits.*",
+        "$.channels.*.[publish,subscribe].message.oneOf.*.traits.*",
+        "$.components.channels.*.[publish,subscribe].message.traits.*",
+        "$.components.channels.*.[publish,subscribe].message.oneOf.*.traits.*",
+        "$.components.messages.*.traits.*",
+        "$.components.messageTraits.*"
+      ],
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/asyncapi-rules/#asyncapi-message-examples"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/asyncapi/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/asyncapi-message-examples/"
+    },
+    {
+      "slug": "asyncapi-message-messageId-uniqueness",
+      "source": "built-in",
+      "ruleset": "spectral:asyncapi",
+      "rulesetName": "AsyncAPI",
+      "description": "\"messageId\" must be unique across all the messages.",
+      "message": null,
+      "recommended": true,
+      "severity": "error",
+      "formats": [
+        "AsyncAPI 2.x"
+      ],
+      "functions": [
+        "asyncApi2MessageIdUniqueness"
+      ],
+      "properties": [
+        "messageId"
+      ],
+      "given": "$",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/asyncapi-rules/#asyncapi-message-messageId-uniqueness"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/asyncapi/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/asyncapi-message-messageId-uniqueness/"
+    },
+    {
+      "slug": "asyncapi-operation-description",
+      "source": "built-in",
+      "ruleset": "spectral:asyncapi",
+      "rulesetName": "AsyncAPI",
+      "description": "Operation \"description\" must be present and non-empty string.",
+      "message": null,
+      "recommended": true,
+      "severity": "warn",
+      "formats": [
+        "AsyncAPI 2.x"
+      ],
+      "functions": [
+        "truthy"
+      ],
+      "properties": [
+        "description"
+      ],
+      "given": "$.channels[*][publish,subscribe]",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/asyncapi-rules/#asyncapi-operation-description"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/asyncapi/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/asyncapi-operation-description/"
+    },
+    {
+      "slug": "asyncapi-operation-operationId",
+      "source": "built-in",
+      "ruleset": "spectral:asyncapi",
+      "rulesetName": "AsyncAPI",
+      "description": "Operation must have \"operationId\".",
+      "message": null,
+      "recommended": true,
+      "severity": "error",
+      "formats": [
+        "AsyncAPI 2.x"
+      ],
+      "functions": [
+        "truthy"
+      ],
+      "properties": [
+        "operationId"
+      ],
+      "given": "$.channels[*][publish,subscribe]",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/asyncapi-rules/#asyncapi-operation-operationId"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/asyncapi/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/asyncapi-operation-operationId/"
+    },
+    {
+      "slug": "asyncapi-operation-operationId-uniqueness",
+      "source": "built-in",
+      "ruleset": "spectral:asyncapi",
+      "rulesetName": "AsyncAPI",
+      "description": "\"operationId\" must be unique across all the operations.",
+      "message": null,
+      "recommended": true,
+      "severity": "error",
+      "formats": [
+        "AsyncAPI 2.x"
+      ],
+      "functions": [
+        "asyncApi2OperationIdUniqueness"
+      ],
+      "properties": [
+        "operationId"
+      ],
+      "given": "$",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/asyncapi-rules/#asyncapi-operation-operationId-uniqueness"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/asyncapi/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/asyncapi-operation-operationId-uniqueness/"
+    },
+    {
+      "slug": "asyncapi-operation-security",
+      "source": "built-in",
+      "ruleset": "spectral:asyncapi",
+      "rulesetName": "AsyncAPI",
+      "description": "Operation have to reference a defined security schemes.",
+      "message": "{{error}}",
+      "recommended": true,
+      "severity": "error",
+      "formats": [
+        "AsyncAPI 2.x"
+      ],
+      "functions": [
+        "asyncApiSecurity"
+      ],
+      "properties": [
+        "security"
+      ],
+      "given": "$.channels[*][publish,subscribe].security.*",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/asyncapi-rules/#asyncapi-operation-security"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/asyncapi/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/asyncapi-operation-security/"
+    },
+    {
+      "slug": "asyncapi-parameter-description",
+      "source": "built-in",
+      "ruleset": "spectral:asyncapi",
+      "rulesetName": "AsyncAPI",
+      "description": "Parameter objects must have \"description\".",
+      "message": null,
+      "recommended": false,
+      "severity": "warn",
+      "formats": [
+        "AsyncAPI 2.x",
+        "AsyncAPI 3.x"
+      ],
+      "functions": [
+        "truthy"
+      ],
+      "properties": [
+        "description"
+      ],
+      "given": [
+        "$.components.parameters.*",
+        "$.channels.*.parameters.*"
+      ],
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/asyncapi-rules/#asyncapi-parameter-description"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/asyncapi/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/asyncapi-parameter-description/"
+    },
+    {
+      "slug": "asyncapi-payload",
+      "source": "built-in",
+      "ruleset": "spectral:asyncapi",
+      "rulesetName": "AsyncAPI",
+      "description": "Payloads must be valid against AsyncAPI Schema object.",
+      "message": "{{error}}",
+      "recommended": true,
+      "severity": "error",
+      "formats": [
+        "AsyncAPI 2.x"
+      ],
+      "functions": [
+        "asyncApiPayloadValidation"
+      ],
+      "properties": [
+        "payload"
+      ],
+      "given": [
+        "$.components.messageTraits[?(@.schemaFormat === void 0)].payload",
+        "$.components.messages[?(@.schemaFormat === void 0)].payload",
+        "$.channels[*][publish,subscribe][?(@property === 'message' && @.schemaFormat === void 0)].payload"
+      ],
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/asyncapi-rules/#asyncapi-payload"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/asyncapi/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/asyncapi-payload/"
+    },
+    {
+      "slug": "asyncapi-payload-default",
+      "source": "built-in",
+      "ruleset": "spectral:asyncapi",
+      "rulesetName": "AsyncAPI",
+      "description": "Default must be valid against its defined schema.",
+      "message": "{{error}}",
+      "recommended": true,
+      "severity": "error",
+      "formats": [
+        "AsyncAPI 2.x"
+      ],
+      "functions": [
+        "asyncApiSchemaValidation"
+      ],
+      "properties": [
+        "default"
+      ],
+      "given": [
+        "$.components.messageTraits[?(@.schemaFormat === void 0)].payload.default^",
+        "$.components.messages[?(@.schemaFormat === void 0)].payload.default^",
+        "$.channels[*][publish,subscribe][?(@property === 'message' && @.schemaFormat === void 0)].payload.default^"
+      ],
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/asyncapi-rules/#asyncapi-payload-default"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/asyncapi/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/asyncapi-payload-default/"
+    },
+    {
+      "slug": "asyncapi-payload-examples",
+      "source": "built-in",
+      "ruleset": "spectral:asyncapi",
+      "rulesetName": "AsyncAPI",
+      "description": "Examples must be valid against their defined schema.",
+      "message": "{{error}}",
+      "recommended": true,
+      "severity": "error",
+      "formats": [
+        "AsyncAPI 2.x"
+      ],
+      "functions": [
+        "asyncApiSchemaValidation"
+      ],
+      "properties": [
+        "examples"
+      ],
+      "given": [
+        "$.components.messageTraits[?(@.schemaFormat === void 0)].payload.examples^",
+        "$.components.messages[?(@.schemaFormat === void 0)].payload.examples^",
+        "$.channels[*][publish,subscribe][?(@property === 'message' && @.schemaFormat === void 0)].payload.examples^"
+      ],
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/asyncapi-rules/#asyncapi-payload-examples"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/asyncapi/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/asyncapi-payload-examples/"
+    },
+    {
+      "slug": "asyncapi-payload-unsupported-schemaFormat",
+      "source": "built-in",
+      "ruleset": "spectral:asyncapi",
+      "rulesetName": "AsyncAPI",
+      "description": "Message schema validation is only supported with default unspecified \"schemaFormat\".",
+      "message": null,
+      "recommended": true,
+      "severity": "info",
+      "formats": [
+        "AsyncAPI 2.x"
+      ],
+      "functions": [
+        "undefined"
+      ],
+      "properties": [
+        "schemaFormat"
+      ],
+      "given": [
+        "$.components.messageTraits.*",
+        "$.components.messages.*",
+        "$.channels[*][publish,subscribe].message"
+      ],
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/asyncapi-rules/#asyncapi-payload-unsupported-schemaFormat"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/asyncapi/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/asyncapi-payload-unsupported-schemaFormat/"
+    },
+    {
+      "slug": "asyncapi-schema",
+      "source": "built-in",
+      "ruleset": "spectral:asyncapi",
+      "rulesetName": "AsyncAPI",
+      "description": "Validate structure of AsyncAPI specification.",
+      "message": "{{error}}",
+      "recommended": true,
+      "severity": "error",
+      "formats": [
+        "AsyncAPI 2.x"
+      ],
+      "functions": [
+        "function"
+      ],
+      "properties": [
+        "document"
+      ],
+      "given": "$",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/asyncapi-rules/#asyncapi-schema"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/asyncapi/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/asyncapi-schema/"
+    },
+    {
+      "slug": "asyncapi-schema-default",
+      "source": "built-in",
+      "ruleset": "spectral:asyncapi",
+      "rulesetName": "AsyncAPI",
+      "description": "Default must be valid against its defined schema.",
+      "message": "{{error}}",
+      "recommended": true,
+      "severity": "error",
+      "formats": [
+        "AsyncAPI 2.x"
+      ],
+      "functions": [
+        "asyncApiSchemaValidation"
+      ],
+      "properties": [
+        "default"
+      ],
+      "given": [
+        "$.components.schemas.*.default^",
+        "$.components.parameters.*.schema.default^",
+        "$.channels.*.parameters.*.schema.default^"
+      ],
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/asyncapi-rules/#asyncapi-schema-default"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/asyncapi/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/asyncapi-schema-default/"
+    },
+    {
+      "slug": "asyncapi-schema-examples",
+      "source": "built-in",
+      "ruleset": "spectral:asyncapi",
+      "rulesetName": "AsyncAPI",
+      "description": "Examples must be valid against their defined schema.",
+      "message": "{{error}}",
+      "recommended": true,
+      "severity": "error",
+      "formats": [
+        "AsyncAPI 2.x"
+      ],
+      "functions": [
+        "asyncApiSchemaValidation"
+      ],
+      "properties": [
+        "examples"
+      ],
+      "given": [
+        "$.components.schemas.*.examples^",
+        "$.components.parameters.*.schema.examples^",
+        "$.channels.*.parameters.*.schema.examples^"
+      ],
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/asyncapi-rules/#asyncapi-schema-examples"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/asyncapi/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/asyncapi-schema-examples/"
+    },
+    {
+      "slug": "asyncapi-server-no-empty-variable",
+      "source": "built-in",
+      "ruleset": "spectral:asyncapi",
+      "rulesetName": "AsyncAPI",
+      "description": "Server URL must not have empty variable substitution pattern.",
+      "message": null,
+      "recommended": true,
+      "severity": "warn",
+      "formats": [
+        "AsyncAPI 2.x"
+      ],
+      "functions": [
+        "pattern"
+      ],
+      "properties": [
+        "url"
+      ],
+      "given": "$.servers[*].url",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/asyncapi-rules/#asyncapi-server-no-empty-variable"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/asyncapi/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/asyncapi-server-no-empty-variable/"
+    },
+    {
+      "slug": "asyncapi-server-no-trailing-slash",
+      "source": "built-in",
+      "ruleset": "spectral:asyncapi",
+      "rulesetName": "AsyncAPI",
+      "description": "Server URL must not end with slash.",
+      "message": null,
+      "recommended": true,
+      "severity": "warn",
+      "formats": [
+        "AsyncAPI 2.x"
+      ],
+      "functions": [
+        "pattern"
+      ],
+      "properties": [
+        "url"
+      ],
+      "given": "$.servers[*].url",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/asyncapi-rules/#asyncapi-server-no-trailing-slash"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/asyncapi/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/asyncapi-server-no-trailing-slash/"
+    },
+    {
+      "slug": "asyncapi-server-not-example-com",
+      "source": "built-in",
+      "ruleset": "spectral:asyncapi",
+      "rulesetName": "AsyncAPI",
+      "description": "Server URL must not point at example.com.",
+      "message": null,
+      "recommended": false,
+      "severity": "warn",
+      "formats": [
+        "AsyncAPI 2.x"
+      ],
+      "functions": [
+        "pattern"
+      ],
+      "properties": [
+        "url"
+      ],
+      "given": "$.servers[*].url",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/asyncapi-rules/#asyncapi-server-not-example-com"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/asyncapi/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/asyncapi-server-not-example-com/"
+    },
+    {
+      "slug": "asyncapi-server-security",
+      "source": "built-in",
+      "ruleset": "spectral:asyncapi",
+      "rulesetName": "AsyncAPI",
+      "description": "Server have to reference a defined security schemes.",
+      "message": "{{error}}",
+      "recommended": true,
+      "severity": "error",
+      "formats": [
+        "AsyncAPI 2.x"
+      ],
+      "functions": [
+        "asyncApiSecurity"
+      ],
+      "properties": [
+        "security"
+      ],
+      "given": "$.servers.*.security.*",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/asyncapi-rules/#asyncapi-server-security"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/asyncapi/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/asyncapi-server-security/"
+    },
+    {
+      "slug": "asyncapi-server-variables",
+      "source": "built-in",
+      "ruleset": "spectral:asyncapi",
+      "rulesetName": "AsyncAPI",
+      "description": "Server variables must be defined and there must be no redundant variables.",
+      "message": "{{error}}",
+      "recommended": true,
+      "severity": "error",
+      "formats": [
+        "AsyncAPI 2.x"
+      ],
+      "functions": [
+        "serverVariables"
+      ],
+      "properties": [
+        "servers"
+      ],
+      "given": [
+        "$.servers.*",
+        "$.components.servers.*"
+      ],
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/asyncapi-rules/#asyncapi-server-variables"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/asyncapi/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/asyncapi-server-variables/"
+    },
+    {
+      "slug": "asyncapi-servers",
+      "source": "built-in",
+      "ruleset": "spectral:asyncapi",
+      "rulesetName": "AsyncAPI",
+      "description": "AsyncAPI object must have non-empty \"servers\" object.",
+      "message": null,
+      "recommended": true,
+      "severity": "warn",
+      "formats": [
+        "AsyncAPI 2.x",
+        "AsyncAPI 3.x"
+      ],
+      "functions": [
+        "schema"
+      ],
+      "properties": [
+        "servers"
+      ],
+      "given": "$",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/asyncapi-rules/#asyncapi-servers"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/asyncapi/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/asyncapi-servers/"
+    },
+    {
+      "slug": "asyncapi-tag-description",
+      "source": "built-in",
+      "ruleset": "spectral:asyncapi",
+      "rulesetName": "AsyncAPI",
+      "description": "Tag object must have \"description\".",
+      "message": null,
+      "recommended": false,
+      "severity": "warn",
+      "formats": [
+        "AsyncAPI 2.x"
+      ],
+      "functions": [
+        "truthy"
+      ],
+      "properties": [
+        "description"
+      ],
+      "given": "$.tags[*]",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/asyncapi-rules/#asyncapi-tag-description"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/asyncapi/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/asyncapi-tag-description/"
+    },
+    {
+      "slug": "asyncapi-tags",
+      "source": "built-in",
+      "ruleset": "spectral:asyncapi",
+      "rulesetName": "AsyncAPI",
+      "description": "AsyncAPI object must have non-empty \"tags\" array.",
+      "message": null,
+      "recommended": true,
+      "severity": "warn",
+      "formats": [
+        "AsyncAPI 2.x"
+      ],
+      "functions": [
+        "truthy"
+      ],
+      "properties": [
+        "tags"
+      ],
+      "given": "$",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/asyncapi-rules/#asyncapi-tags"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/asyncapi/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/asyncapi-tags/"
+    },
+    {
+      "slug": "asyncapi-tags-alphabetical",
+      "source": "built-in",
+      "ruleset": "spectral:asyncapi",
+      "rulesetName": "AsyncAPI",
+      "description": "AsyncAPI object must have alphabetical \"tags\".",
+      "message": null,
+      "recommended": false,
+      "severity": "warn",
+      "formats": [
+        "AsyncAPI 2.x"
+      ],
+      "functions": [
+        "alphabetical"
+      ],
+      "properties": [
+        "tags"
+      ],
+      "given": "$",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/asyncapi-rules/#asyncapi-tags-alphabetical"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/asyncapi/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/asyncapi-tags-alphabetical/"
+    },
+    {
+      "slug": "asyncapi-tags-uniqueness",
+      "source": "built-in",
+      "ruleset": "spectral:asyncapi",
+      "rulesetName": "AsyncAPI",
+      "description": "Each tag must have a unique name.",
+      "message": "{{error}}",
+      "recommended": true,
+      "severity": "error",
+      "formats": [
+        "AsyncAPI 2.x"
+      ],
+      "functions": [
+        "uniquenessTags"
+      ],
+      "properties": [
+        "tags"
+      ],
+      "given": [
+        "$.tags",
+        "$.servers.*.tags",
+        "$.components.servers.*.tags",
+        "$.channels.*.[publish,subscribe].tags",
+        "$.components.channels.*.[publish,subscribe].tags",
+        "$.channels.*.[publish,subscribe].traits.*.tags",
+        "$.components.channels.*.[publish,subscribe].traits.*.tags",
+        "$.components.operationTraits.*.tags",
+        "$.channels.*.[publish,subscribe].message.tags",
+        "$.channels.*.[publish,subscribe].message.oneOf.*.tags",
+        "$.components.channels.*.[publish,subscribe].message.tags",
+        "$.components.channels.*.[publish,subscribe].message.oneOf.*.tags",
+        "$.components.messages.*.tags",
+        "$.channels.*.[publish,subscribe].message.traits.*.tags",
+        "$.channels.*.[publish,subscribe].message.oneOf.*.traits.*.tags",
+        "$.components.channels.*.[publish,subscribe].message.traits.*.tags",
+        "$.components.channels.*.[publish,subscribe].message.oneOf.*.traits.*.tags",
+        "$.components.messages.*.traits.*.tags",
+        "$.components.messageTraits.*.tags"
+      ],
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/asyncapi-rules/#asyncapi-tags-uniqueness"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/asyncapi/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/asyncapi-tags-uniqueness/"
+    },
+    {
+      "slug": "asyncapi-unused-components-schema",
+      "source": "built-in",
+      "ruleset": "spectral:asyncapi",
+      "rulesetName": "AsyncAPI",
+      "description": "Potentially unused components schema has been detected.",
+      "message": null,
+      "recommended": true,
+      "severity": "warn",
+      "formats": [
+        "AsyncAPI 2.x",
+        "AsyncAPI 3.x"
+      ],
+      "functions": [
+        "unreferencedReusableObject"
+      ],
+      "properties": [
+        "schemas"
+      ],
+      "given": "$.components.schemas",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/asyncapi-rules/#asyncapi-unused-components-schema"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/asyncapi/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/asyncapi-unused-components-schema/"
+    },
+    {
+      "slug": "asyncapi-unused-components-server",
+      "source": "built-in",
+      "ruleset": "spectral:asyncapi",
+      "rulesetName": "AsyncAPI",
+      "description": "Potentially unused components server has been detected.",
+      "message": null,
+      "recommended": true,
+      "severity": "warn",
+      "formats": [
+        "AsyncAPI 2.x",
+        "AsyncAPI 3.x"
+      ],
+      "functions": [
+        "unreferencedReusableObject"
+      ],
+      "properties": [
+        "servers"
+      ],
+      "given": "$.components.servers",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/asyncapi-rules/#asyncapi-unused-components-server"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/asyncapi/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/asyncapi-unused-components-server/"
+    },
+    {
+      "slug": "contact-properties",
+      "source": "built-in",
+      "ruleset": "spectral:oas",
+      "rulesetName": "OpenAPI",
+      "description": "Contact object must have \"name\", \"url\" and \"email\".",
+      "message": null,
+      "recommended": false,
+      "severity": "warn",
+      "formats": [
+        "OpenAPI 2.0 (Swagger)",
+        "OpenAPI 3.x",
+        "OpenAPI 3.0.x",
+        "OpenAPI 3.1.x",
+        "OpenAPI 3.2.x"
+      ],
+      "functions": [
+        "truthy"
+      ],
+      "properties": [
+        "email",
+        "name",
+        "url"
+      ],
+      "given": "$.info.contact",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/openapi-rules/#contact-properties"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/oas/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/contact-properties/"
+    },
+    {
+      "slug": "duplicated-entry-in-enum",
+      "source": "built-in",
+      "ruleset": "spectral:oas",
+      "rulesetName": "OpenAPI",
+      "description": "Enum values must not have duplicate entry.",
+      "message": "{{error}}",
+      "recommended": true,
+      "severity": "warn",
+      "formats": [
+        "OpenAPI 2.0 (Swagger)",
+        "OpenAPI 3.x",
+        "OpenAPI 3.0.x",
+        "OpenAPI 3.1.x",
+        "OpenAPI 3.2.x"
+      ],
+      "functions": [
+        "oasSchema"
+      ],
+      "properties": [
+        "enum"
+      ],
+      "given": [
+        "$..[?(@property !== 'properties' && @ != null && @.enum && @.enum.constructor.name === 'Array')]"
+      ],
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/openapi-rules/#duplicated-entry-in-enum"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/oas/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/duplicated-entry-in-enum/"
+    },
+    {
+      "slug": "info-contact",
+      "source": "built-in",
+      "ruleset": "spectral:oas",
+      "rulesetName": "OpenAPI",
+      "description": "Info object must have \"contact\" object.",
+      "message": null,
+      "recommended": true,
+      "severity": "warn",
+      "formats": [
+        "OpenAPI 2.0 (Swagger)",
+        "OpenAPI 3.x",
+        "OpenAPI 3.0.x",
+        "OpenAPI 3.1.x",
+        "OpenAPI 3.2.x"
+      ],
+      "functions": [
+        "truthy"
+      ],
+      "properties": [
+        "contact"
+      ],
+      "given": "$",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/openapi-rules/#info-contact"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/oas/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/info-contact/"
+    },
+    {
+      "slug": "info-description",
+      "source": "built-in",
+      "ruleset": "spectral:oas",
+      "rulesetName": "OpenAPI",
+      "description": "Info \"description\" must be present and non-empty string.",
+      "message": null,
+      "recommended": true,
+      "severity": "warn",
+      "formats": [
+        "OpenAPI 2.0 (Swagger)",
+        "OpenAPI 3.x",
+        "OpenAPI 3.0.x",
+        "OpenAPI 3.1.x",
+        "OpenAPI 3.2.x"
+      ],
+      "functions": [
+        "truthy"
+      ],
+      "properties": [
+        "description"
+      ],
+      "given": "$",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/openapi-rules/#info-description"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/oas/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/info-description/"
+    },
+    {
+      "slug": "info-license",
+      "source": "built-in",
+      "ruleset": "spectral:oas",
+      "rulesetName": "OpenAPI",
+      "description": "Info object must have \"license\" object.",
+      "message": null,
+      "recommended": false,
+      "severity": "warn",
+      "formats": [
+        "OpenAPI 2.0 (Swagger)",
+        "OpenAPI 3.x",
+        "OpenAPI 3.0.x",
+        "OpenAPI 3.1.x",
+        "OpenAPI 3.2.x"
+      ],
+      "functions": [
+        "truthy"
+      ],
+      "properties": [
+        "license"
+      ],
+      "given": "$",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/openapi-rules/#info-license"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/oas/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/info-license/"
+    },
+    {
+      "slug": "license-url",
+      "source": "built-in",
+      "ruleset": "spectral:oas",
+      "rulesetName": "OpenAPI",
+      "description": "License object must include \"url\".",
+      "message": null,
+      "recommended": false,
+      "severity": "warn",
+      "formats": [
+        "OpenAPI 2.0 (Swagger)",
+        "OpenAPI 3.x",
+        "OpenAPI 3.0.x",
+        "OpenAPI 3.1.x",
+        "OpenAPI 3.2.x"
+      ],
+      "functions": [
+        "truthy"
+      ],
+      "properties": [
+        "url"
+      ],
+      "given": "$",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/openapi-rules/#license-url"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/oas/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/license-url/"
+    },
+    {
+      "slug": "no-$ref-siblings",
+      "source": "built-in",
+      "ruleset": "spectral:oas",
+      "rulesetName": "OpenAPI",
+      "description": "Property must not be placed among $ref",
+      "message": "{{error}}",
+      "recommended": true,
+      "severity": "error",
+      "formats": [
+        "OpenAPI 2.0 (Swagger)",
+        "OpenAPI 3.0.x"
+      ],
+      "functions": [
+        "refSiblings"
+      ],
+      "properties": [
+        "$ref"
+      ],
+      "given": "$..[?(@property === '$ref')]",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/openapi-rules/#no-$ref-siblings"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/oas/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/no-$ref-siblings/"
+    },
+    {
+      "slug": "no-eval-in-markdown",
+      "source": "built-in",
+      "ruleset": "spectral:oas",
+      "rulesetName": "OpenAPI",
+      "description": "Markdown descriptions must not have \"eval(\".",
+      "message": null,
+      "recommended": true,
+      "severity": "warn",
+      "formats": [
+        "OpenAPI 2.0 (Swagger)",
+        "OpenAPI 3.x",
+        "OpenAPI 3.0.x",
+        "OpenAPI 3.1.x",
+        "OpenAPI 3.2.x"
+      ],
+      "functions": [
+        "pattern"
+      ],
+      "properties": [
+        "description",
+        "title"
+      ],
+      "given": "$..[description,title]",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/openapi-rules/#no-eval-in-markdown"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/oas/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/no-eval-in-markdown/"
+    },
+    {
+      "slug": "no-script-tags-in-markdown",
+      "source": "built-in",
+      "ruleset": "spectral:oas",
+      "rulesetName": "OpenAPI",
+      "description": "Markdown descriptions must not have \"<script>\" tags.",
+      "message": null,
+      "recommended": true,
+      "severity": "warn",
+      "formats": [
+        "OpenAPI 2.0 (Swagger)",
+        "OpenAPI 3.x",
+        "OpenAPI 3.0.x",
+        "OpenAPI 3.1.x",
+        "OpenAPI 3.2.x"
+      ],
+      "functions": [
+        "pattern"
+      ],
+      "properties": [
+        "description",
+        "title"
+      ],
+      "given": "$..[description,title]",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/openapi-rules/#no-script-tags-in-markdown"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/oas/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/no-script-tags-in-markdown/"
+    },
+    {
+      "slug": "oas2-anyOf",
+      "source": "built-in",
+      "ruleset": "spectral:oas",
+      "rulesetName": "OpenAPI",
+      "description": "anyOf is not available in OpenAPI v2, it was added in OpenAPI v3",
+      "message": "\"anyOf\" keyword must not be used in OpenAPI v2 document.",
+      "recommended": true,
+      "severity": "warn",
+      "formats": [
+        "OpenAPI 2.0 (Swagger)"
+      ],
+      "functions": [
+        "undefined"
+      ],
+      "properties": [
+        "anyOf"
+      ],
+      "given": "$..anyOf",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/openapi-rules/#oas2-anyOf"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/oas/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/oas2-anyOf/"
+    },
+    {
+      "slug": "oas2-api-host",
+      "source": "built-in",
+      "ruleset": "spectral:oas",
+      "rulesetName": "OpenAPI",
+      "description": "OpenAPI \"host\" must be present and non-empty string.",
+      "message": null,
+      "recommended": true,
+      "severity": "warn",
+      "formats": [
+        "OpenAPI 2.0 (Swagger)"
+      ],
+      "functions": [
+        "truthy"
+      ],
+      "properties": [
+        "host"
+      ],
+      "given": "$",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/openapi-rules/#oas2-api-host"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/oas/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/oas2-api-host/"
+    },
+    {
+      "slug": "oas2-api-schemes",
+      "source": "built-in",
+      "ruleset": "spectral:oas",
+      "rulesetName": "OpenAPI",
+      "description": "OpenAPI host \"schemes\" must be present and non-empty array.",
+      "message": null,
+      "recommended": true,
+      "severity": "warn",
+      "formats": [
+        "OpenAPI 2.0 (Swagger)"
+      ],
+      "functions": [
+        "schema"
+      ],
+      "properties": [
+        "schemes"
+      ],
+      "given": "$",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/openapi-rules/#oas2-api-schemes"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/oas/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/oas2-api-schemes/"
+    },
+    {
+      "slug": "oas2-discriminator",
+      "source": "built-in",
+      "ruleset": "spectral:oas",
+      "rulesetName": "OpenAPI",
+      "description": "discriminator property must be defined and required",
+      "message": "{{error}}",
+      "recommended": true,
+      "severity": "error",
+      "formats": [
+        "OpenAPI 2.0 (Swagger)"
+      ],
+      "functions": [
+        "oasDiscriminator"
+      ],
+      "properties": [
+        "discriminator"
+      ],
+      "given": "$.definitions[?(@.discriminator)]",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/openapi-rules/#oas2-discriminator"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/oas/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/oas2-discriminator/"
+    },
+    {
+      "slug": "oas2-host-not-example",
+      "source": "built-in",
+      "ruleset": "spectral:oas",
+      "rulesetName": "OpenAPI",
+      "description": "Host URL must not point at example.com.",
+      "message": null,
+      "recommended": false,
+      "severity": "warn",
+      "formats": [
+        "OpenAPI 2.0 (Swagger)"
+      ],
+      "functions": [
+        "pattern"
+      ],
+      "properties": [
+        "host"
+      ],
+      "given": "$",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/openapi-rules/#oas2-host-not-example"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/oas/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/oas2-host-not-example/"
+    },
+    {
+      "slug": "oas2-host-trailing-slash",
+      "source": "built-in",
+      "ruleset": "spectral:oas",
+      "rulesetName": "OpenAPI",
+      "description": "Server URL must not have trailing slash.",
+      "message": null,
+      "recommended": true,
+      "severity": "warn",
+      "formats": [
+        "OpenAPI 2.0 (Swagger)"
+      ],
+      "functions": [
+        "pattern"
+      ],
+      "properties": [
+        "host"
+      ],
+      "given": "$",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/openapi-rules/#oas2-host-trailing-slash"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/oas/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/oas2-host-trailing-slash/"
+    },
+    {
+      "slug": "oas2-oneOf",
+      "source": "built-in",
+      "ruleset": "spectral:oas",
+      "rulesetName": "OpenAPI",
+      "description": "oneOf is not available in OpenAPI v2, it was added in OpenAPI v3",
+      "message": "\"oneOf\" keyword must not be used in OpenAPI v2 document.",
+      "recommended": true,
+      "severity": "warn",
+      "formats": [
+        "OpenAPI 2.0 (Swagger)"
+      ],
+      "functions": [
+        "undefined"
+      ],
+      "properties": [
+        "oneOf"
+      ],
+      "given": "$..oneOf",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/openapi-rules/#oas2-oneOf"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/oas/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/oas2-oneOf/"
+    },
+    {
+      "slug": "oas2-operation-formData-consume-check",
+      "source": "built-in",
+      "ruleset": "spectral:oas",
+      "rulesetName": "OpenAPI",
+      "description": "Operations with \"in: formData\" parameter must include \"application/x-www-form-urlencoded\" or \"multipart/form-data\" in their \"consumes\" property.",
+      "message": null,
+      "recommended": true,
+      "severity": "warn",
+      "formats": [
+        "OpenAPI 2.0 (Swagger)"
+      ],
+      "functions": [
+        "oasOpFormDataConsumeCheck"
+      ],
+      "properties": [
+        "operation"
+      ],
+      "given": "#OperationObject",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/openapi-rules/#oas2-operation-formData-consume-check"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/oas/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/oas2-operation-formData-consume-check/"
+    },
+    {
+      "slug": "oas2-operation-security-defined",
+      "source": "built-in",
+      "ruleset": "spectral:oas",
+      "rulesetName": "OpenAPI",
+      "description": "Operation \"security\" values must match a scheme defined in the \"securityDefinitions\" object.",
+      "message": "{{error}}",
+      "recommended": true,
+      "severity": "warn",
+      "formats": [
+        "OpenAPI 2.0 (Swagger)"
+      ],
+      "functions": [
+        "oasSecurityDefined"
+      ],
+      "properties": [
+        "security"
+      ],
+      "given": "#SecurityRequirementObject",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/openapi-rules/#oas2-operation-security-defined"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/oas/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/oas2-operation-security-defined/"
+    },
+    {
+      "slug": "oas2-parameter-description",
+      "source": "built-in",
+      "ruleset": "spectral:oas",
+      "rulesetName": "OpenAPI",
+      "description": "Parameter objects must have \"description\".",
+      "message": null,
+      "recommended": false,
+      "severity": "warn",
+      "formats": [
+        "OpenAPI 2.0 (Swagger)"
+      ],
+      "functions": [
+        "truthy"
+      ],
+      "properties": [
+        "description"
+      ],
+      "given": "$..parameters[?(@ && @.in)]",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/openapi-rules/#oas2-parameter-description"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/oas/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/oas2-parameter-description/"
+    },
+    {
+      "slug": "oas2-schema",
+      "source": "built-in",
+      "ruleset": "spectral:oas",
+      "rulesetName": "OpenAPI",
+      "description": "Validate structure of OpenAPI v2 specification.",
+      "message": "{{error}}.",
+      "recommended": true,
+      "severity": "error",
+      "formats": [
+        "OpenAPI 2.0 (Swagger)"
+      ],
+      "functions": [
+        "oasDocumentSchema"
+      ],
+      "properties": [
+        "document"
+      ],
+      "given": "$",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/openapi-rules/#oas2-schema"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/oas/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/oas2-schema/"
+    },
+    {
+      "slug": "oas2-unused-definition",
+      "source": "built-in",
+      "ruleset": "spectral:oas",
+      "rulesetName": "OpenAPI",
+      "description": "Potentially unused definition has been detected.",
+      "message": null,
+      "recommended": true,
+      "severity": "warn",
+      "formats": [
+        "OpenAPI 2.0 (Swagger)"
+      ],
+      "functions": [
+        "unreferencedReusableObject"
+      ],
+      "properties": [
+        "definitions"
+      ],
+      "given": "$.definitions",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/openapi-rules/#oas2-unused-definition"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/oas/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/oas2-unused-definition/"
+    },
+    {
+      "slug": "oas2-valid-media-example",
+      "source": "built-in",
+      "ruleset": "spectral:oas",
+      "rulesetName": "OpenAPI",
+      "description": "Examples must be valid against their defined schema.",
+      "message": "{{error}}",
+      "recommended": true,
+      "severity": "error",
+      "formats": [
+        "OpenAPI 2.0 (Swagger)"
+      ],
+      "functions": [
+        "oasExample"
+      ],
+      "properties": [
+        "schema"
+      ],
+      "given": "$..responses..[?(@ && @.schema && @.examples)]",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/openapi-rules/#oas2-valid-media-example"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/oas/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/oas2-valid-media-example/"
+    },
+    {
+      "slug": "oas2-valid-schema-example",
+      "source": "built-in",
+      "ruleset": "spectral:oas",
+      "rulesetName": "OpenAPI",
+      "description": "Examples must be valid against their defined schema.",
+      "message": "{{error}}",
+      "recommended": true,
+      "severity": "error",
+      "formats": [
+        "OpenAPI 2.0 (Swagger)"
+      ],
+      "functions": [
+        "oasExample"
+      ],
+      "properties": [
+        "items"
+      ],
+      "given": [
+        "$..definitions..[?(@property !== 'properties' && @ && (@.example !== void 0 || @['x-example'] !== void 0 || @.default !== void 0) && (@.enum || @.type || @.format || @.$ref || @.properties || @.items))]",
+        "$..parameters..[?(@property !== 'properties' && @ && (@.example !== void 0 || @['x-example'] !== void 0 || @.default !== void 0) && (@.enum || @.type || @.format || @.$ref || @.properties || @.items))]",
+        "$..responses..[?(@property !== 'properties' && @ && (@.example !== void 0 || @['x-example'] !== void 0 || @.default !== void 0) && (@.enum || @.type || @.format || @.$ref || @.properties || @.items))]"
+      ],
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/openapi-rules/#oas2-valid-schema-example"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/oas/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/oas2-valid-schema-example/"
+    },
+    {
+      "slug": "oas3_1-callbacks-in-webhook",
+      "source": "built-in",
+      "ruleset": "spectral:oas",
+      "rulesetName": "OpenAPI",
+      "description": "",
+      "message": "Callbacks should not be defined in a webhook.",
+      "recommended": true,
+      "severity": "warn",
+      "formats": [
+        "OpenAPI 3.1.x",
+        "OpenAPI 3.2.x"
+      ],
+      "functions": [
+        "undefined"
+      ],
+      "properties": [
+        "callbacks"
+      ],
+      "given": [
+        "$.webhooks[*][*].callbacks"
+      ],
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/openapi-rules/#oas3_1-callbacks-in-webhook"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/oas/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/oas3_1-callbacks-in-webhook/"
+    },
+    {
+      "slug": "oas3_1-servers-in-webhook",
+      "source": "built-in",
+      "ruleset": "spectral:oas",
+      "rulesetName": "OpenAPI",
+      "description": "",
+      "message": "Servers should not be defined in a webhook.",
+      "recommended": true,
+      "severity": "warn",
+      "formats": [
+        "OpenAPI 3.1.x",
+        "OpenAPI 3.2.x"
+      ],
+      "functions": [
+        "undefined"
+      ],
+      "properties": [
+        "servers"
+      ],
+      "given": [
+        "$.webhooks.servers",
+        "$.webhooks[*][*].servers"
+      ],
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/openapi-rules/#oas3_1-servers-in-webhook"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/oas/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/oas3_1-servers-in-webhook/"
+    },
+    {
+      "slug": "oas3_2-no-deprecated-xml-attribute",
+      "source": "built-in",
+      "ruleset": "spectral:oas",
+      "rulesetName": "OpenAPI",
+      "description": "",
+      "message": "\"xml.attribute\" is deprecated in OAS 3.2; use \"xml.nodeType: attribute\" instead.",
+      "recommended": true,
+      "severity": "warn",
+      "formats": [
+        "OpenAPI 3.2.x"
+      ],
+      "functions": [
+        "schema"
+      ],
+      "properties": [
+        "xml"
+      ],
+      "given": [
+        "$..[?(@ && @.xml)].xml"
+      ],
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/openapi-rules/#oas3_2-no-deprecated-xml-attribute"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/oas/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/oas3_2-no-deprecated-xml-attribute/"
+    },
+    {
+      "slug": "oas3-api-servers",
+      "source": "built-in",
+      "ruleset": "spectral:oas",
+      "rulesetName": "OpenAPI",
+      "description": "OpenAPI \"servers\" must be present and non-empty array.",
+      "message": null,
+      "recommended": true,
+      "severity": "warn",
+      "formats": [
+        "OpenAPI 3.x"
+      ],
+      "functions": [
+        "schema"
+      ],
+      "properties": [
+        "servers"
+      ],
+      "given": "$",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/openapi-rules/#oas3-api-servers"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/oas/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/oas3-api-servers/"
+    },
+    {
+      "slug": "oas3-callbacks-in-callbacks",
+      "source": "built-in",
+      "ruleset": "spectral:oas",
+      "rulesetName": "OpenAPI",
+      "description": "",
+      "message": "Callbacks should not be defined within a callback",
+      "recommended": true,
+      "severity": "warn",
+      "formats": [
+        "OpenAPI 3.x"
+      ],
+      "functions": [
+        "undefined"
+      ],
+      "properties": [
+        "callbacks"
+      ],
+      "given": [
+        "#OperationObject.callbacks[*][*][*].callbacks"
+      ],
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/openapi-rules/#oas3-callbacks-in-callbacks"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/oas/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/oas3-callbacks-in-callbacks/"
+    },
+    {
+      "slug": "oas3-examples-value-or-externalValue",
+      "source": "built-in",
+      "ruleset": "spectral:oas",
+      "rulesetName": "OpenAPI",
+      "description": "Examples must have either \"value\" or \"externalValue\" field.",
+      "message": null,
+      "recommended": true,
+      "severity": "warn",
+      "formats": [
+        "OpenAPI 3.x"
+      ],
+      "functions": [
+        "xor"
+      ],
+      "properties": [
+        "examples"
+      ],
+      "given": [
+        "$.components.examples[*]",
+        "$.paths[*][*]..content[*].examples[*]",
+        "$.paths[*][*]..parameters[*].examples[*]",
+        "$.components.parameters[*].examples[*]",
+        "$.paths[*][*]..headers[*].examples[*]",
+        "$.components.headers[*].examples[*]"
+      ],
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/openapi-rules/#oas3-examples-value-or-externalValue"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/oas/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/oas3-examples-value-or-externalValue/"
+    },
+    {
+      "slug": "oas3-operation-security-defined",
+      "source": "built-in",
+      "ruleset": "spectral:oas",
+      "rulesetName": "OpenAPI",
+      "description": "Operation \"security\" values must match a scheme defined in the \"components.securitySchemes\" object.",
+      "message": "{{error}}",
+      "recommended": true,
+      "severity": "warn",
+      "formats": [
+        "OpenAPI 3.x"
+      ],
+      "functions": [
+        "oasSecurityDefined"
+      ],
+      "properties": [
+        "security"
+      ],
+      "given": "#SecurityRequirementObject",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/openapi-rules/#oas3-operation-security-defined"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/oas/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/oas3-operation-security-defined/"
+    },
+    {
+      "slug": "oas3-parameter-description",
+      "source": "built-in",
+      "ruleset": "spectral:oas",
+      "rulesetName": "OpenAPI",
+      "description": "Parameter objects must have \"description\".",
+      "message": null,
+      "recommended": false,
+      "severity": "warn",
+      "formats": [
+        "OpenAPI 3.x"
+      ],
+      "functions": [
+        "truthy"
+      ],
+      "properties": [
+        "description"
+      ],
+      "given": [
+        "#PathItem.parameters[?(@ && @.in)]",
+        "#OperationObject.parameters[?(@ && @.in)]",
+        "$.components.parameters[?(@ && @.in)]"
+      ],
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/openapi-rules/#oas3-parameter-description"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/oas/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/oas3-parameter-description/"
+    },
+    {
+      "slug": "oas3-schema",
+      "source": "built-in",
+      "ruleset": "spectral:oas",
+      "rulesetName": "OpenAPI",
+      "description": "Validate structure of OpenAPI v3 specification.",
+      "message": "{{error}}.",
+      "recommended": true,
+      "severity": "error",
+      "formats": [
+        "OpenAPI 3.x"
+      ],
+      "functions": [
+        "oasDocumentSchema"
+      ],
+      "properties": [
+        "document"
+      ],
+      "given": "$",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/openapi-rules/#oas3-schema"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/oas/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/oas3-schema/"
+    },
+    {
+      "slug": "oas3-server-not-example.com",
+      "source": "built-in",
+      "ruleset": "spectral:oas",
+      "rulesetName": "OpenAPI",
+      "description": "Server URL must not point at example.com.",
+      "message": null,
+      "recommended": false,
+      "severity": "warn",
+      "formats": [
+        "OpenAPI 3.x"
+      ],
+      "functions": [
+        "pattern"
+      ],
+      "properties": [
+        "url"
+      ],
+      "given": "$.servers[*].url",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/openapi-rules/#oas3-server-not-example.com"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/oas/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/oas3-server-not-example.com/"
+    },
+    {
+      "slug": "oas3-server-trailing-slash",
+      "source": "built-in",
+      "ruleset": "spectral:oas",
+      "rulesetName": "OpenAPI",
+      "description": "Server URL must not have trailing slash.",
+      "message": null,
+      "recommended": true,
+      "severity": "warn",
+      "formats": [
+        "OpenAPI 3.x"
+      ],
+      "functions": [
+        "pattern"
+      ],
+      "properties": [
+        "url"
+      ],
+      "given": "$.servers[*].url",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/openapi-rules/#oas3-server-trailing-slash"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/oas/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/oas3-server-trailing-slash/"
+    },
+    {
+      "slug": "oas3-server-variables",
+      "source": "built-in",
+      "ruleset": "spectral:oas",
+      "rulesetName": "OpenAPI",
+      "description": "Server variables must be defined and valid and there must be no unused variables.",
+      "message": "{{error}}",
+      "recommended": true,
+      "severity": "error",
+      "formats": [
+        "OpenAPI 2.0 (Swagger)",
+        "OpenAPI 3.x",
+        "OpenAPI 3.0.x",
+        "OpenAPI 3.1.x",
+        "OpenAPI 3.2.x"
+      ],
+      "functions": [
+        "serverVariables"
+      ],
+      "properties": [
+        "server",
+        "servers"
+      ],
+      "given": [
+        "$.servers[*]",
+        "#PathItem.servers[*]",
+        "#OperationObject.servers[*]",
+        "#LinkObject.server"
+      ],
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/openapi-rules/#oas3-server-variables"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/oas/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/oas3-server-variables/"
+    },
+    {
+      "slug": "oas3-unused-component",
+      "source": "built-in",
+      "ruleset": "spectral:oas",
+      "rulesetName": "OpenAPI",
+      "description": "",
+      "message": "Potentially unused component has been detected.",
+      "recommended": true,
+      "severity": "warn",
+      "formats": [
+        "OpenAPI 3.x"
+      ],
+      "functions": [
+        "oasUnusedComponent"
+      ],
+      "properties": [
+        "components"
+      ],
+      "given": "$",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/openapi-rules/#oas3-unused-component"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/oas/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/oas3-unused-component/"
+    },
+    {
+      "slug": "oas3-valid-media-example",
+      "source": "built-in",
+      "ruleset": "spectral:oas",
+      "rulesetName": "OpenAPI",
+      "description": "Examples must be valid against their defined schema.",
+      "message": "{{error}}",
+      "recommended": true,
+      "severity": "error",
+      "formats": [
+        "OpenAPI 3.x"
+      ],
+      "functions": [
+        "oasExample"
+      ],
+      "properties": [
+        "schema"
+      ],
+      "given": [
+        "$..content..[?(@ && @.schema && (@.example !== void 0 || @.examples))]",
+        "$..headers..[?(@ && @.schema && (@.example !== void 0 || @.examples))]",
+        "$..parameters..[?(@ && @.schema && (@.example !== void 0 || @.examples))]"
+      ],
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/openapi-rules/#oas3-valid-media-example"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/oas/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/oas3-valid-media-example/"
+    },
+    {
+      "slug": "oas3-valid-schema-example",
+      "source": "built-in",
+      "ruleset": "spectral:oas",
+      "rulesetName": "OpenAPI",
+      "description": "Examples must be valid against their defined schema.",
+      "message": "{{error}}",
+      "recommended": true,
+      "severity": "error",
+      "formats": [
+        "OpenAPI 3.x"
+      ],
+      "functions": [
+        "oasExample"
+      ],
+      "properties": [
+        "example"
+      ],
+      "given": [
+        "$.components.schemas..[?(@property !== 'properties' && @ && (@ && @.example !== void 0 || @.default !== void 0) && (@.enum || @.type || @.format || @.$ref || @.properties || @.items))]",
+        "$..content..[?(@property !== 'properties' && @ && (@ && @.example !== void 0 || @.default !== void 0) && (@.enum || @.type || @.format || @.$ref || @.properties || @.items))]",
+        "$..headers..[?(@property !== 'properties' && @ && (@ && @.example !== void 0 || @.default !== void 0) && (@.enum || @.type || @.format || @.$ref || @.properties || @.items))]",
+        "$..parameters..[?(@property !== 'properties' && @ && (@ && @.example !== void 0 || @.default !== void 0) && (@.enum || @.type || @.format || @.$ref || @.properties || @.items))]"
+      ],
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/openapi-rules/#oas3-valid-schema-example"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/oas/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/oas3-valid-schema-example/"
+    },
+    {
+      "slug": "openapi-tags",
+      "source": "built-in",
+      "ruleset": "spectral:oas",
+      "rulesetName": "OpenAPI",
+      "description": "OpenAPI object must have non-empty \"tags\" array.",
+      "message": null,
+      "recommended": false,
+      "severity": "warn",
+      "formats": [
+        "OpenAPI 2.0 (Swagger)",
+        "OpenAPI 3.x",
+        "OpenAPI 3.0.x",
+        "OpenAPI 3.1.x",
+        "OpenAPI 3.2.x"
+      ],
+      "functions": [
+        "schema"
+      ],
+      "properties": [
+        "tags"
+      ],
+      "given": "$",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/openapi-rules/#openapi-tags"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/oas/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/openapi-tags/"
+    },
+    {
+      "slug": "openapi-tags-alphabetical",
+      "source": "built-in",
+      "ruleset": "spectral:oas",
+      "rulesetName": "OpenAPI",
+      "description": "OpenAPI object must have alphabetical \"tags\".",
+      "message": null,
+      "recommended": false,
+      "severity": "warn",
+      "formats": [
+        "OpenAPI 2.0 (Swagger)",
+        "OpenAPI 3.x",
+        "OpenAPI 3.0.x",
+        "OpenAPI 3.1.x",
+        "OpenAPI 3.2.x"
+      ],
+      "functions": [
+        "alphabetical"
+      ],
+      "properties": [
+        "tags"
+      ],
+      "given": "$",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/openapi-rules/#openapi-tags-alphabetical"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/oas/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/openapi-tags-alphabetical/"
+    },
+    {
+      "slug": "openapi-tags-uniqueness",
+      "source": "built-in",
+      "ruleset": "spectral:oas",
+      "rulesetName": "OpenAPI",
+      "description": "Each tag must have a unique name.",
+      "message": "{{error}}",
+      "recommended": true,
+      "severity": "error",
+      "formats": [
+        "OpenAPI 2.0 (Swagger)",
+        "OpenAPI 3.x",
+        "OpenAPI 3.0.x",
+        "OpenAPI 3.1.x",
+        "OpenAPI 3.2.x"
+      ],
+      "functions": [
+        "uniquenessTags"
+      ],
+      "properties": [
+        "tags"
+      ],
+      "given": "$.tags",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/openapi-rules/#openapi-tags-uniqueness"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/oas/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/openapi-tags-uniqueness/"
+    },
+    {
+      "slug": "operation-description",
+      "source": "built-in",
+      "ruleset": "spectral:oas",
+      "rulesetName": "OpenAPI",
+      "description": "Operation \"description\" must be present and non-empty string.",
+      "message": null,
+      "recommended": true,
+      "severity": "warn",
+      "formats": [
+        "OpenAPI 2.0 (Swagger)",
+        "OpenAPI 3.x",
+        "OpenAPI 3.0.x",
+        "OpenAPI 3.1.x",
+        "OpenAPI 3.2.x"
+      ],
+      "functions": [
+        "truthy"
+      ],
+      "properties": [
+        "description"
+      ],
+      "given": "#OperationObject",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/openapi-rules/#operation-description"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/oas/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/operation-description/"
+    },
+    {
+      "slug": "operation-has-tags",
+      "source": "specification",
+      "ruleset": null,
+      "rulesetName": "OpenLint Ruleset Specification",
+      "description": "Every operation is tagged.",
+      "message": null,
+      "recommended": true,
+      "severity": "hint",
+      "formats": [
+        "OpenAPI 3.x"
+      ],
+      "functions": [
+        "defined"
+      ],
+      "properties": [
+        "tags"
+      ],
+      "given": "#Operation",
+      "links": [
+        {
+          "name": "OpenLint Ruleset Specification",
+          "url": "https://spec.openlint.org/v1/draft/#walkthrough"
+        }
+      ],
+      "url": "https://rules.openlint.org/operation-has-tags/"
+    },
+    {
+      "slug": "operation-id-camel-case",
+      "source": "specification",
+      "ruleset": null,
+      "rulesetName": "OpenLint Ruleset Specification",
+      "description": "operationId is written in camelCase.",
+      "message": null,
+      "recommended": false,
+      "severity": "warn",
+      "formats": [
+        "OpenAPI 3.x"
+      ],
+      "functions": [
+        "casing"
+      ],
+      "properties": [
+        "operationId"
+      ],
+      "given": "$.paths[*]['get','put','post','delete','options','head','patch','trace'].operationId",
+      "links": [
+        {
+          "name": "OpenLint Ruleset Specification",
+          "url": "https://spec.openlint.org/v1/draft/#walkthrough"
+        }
+      ],
+      "url": "https://rules.openlint.org/operation-id-camel-case/"
+    },
+    {
+      "slug": "operation-operationId",
+      "source": "built-in",
+      "ruleset": "spectral:oas",
+      "rulesetName": "OpenAPI",
+      "description": "Operation must have \"operationId\".",
+      "message": null,
+      "recommended": true,
+      "severity": "warn",
+      "formats": [
+        "OpenAPI 2.0 (Swagger)",
+        "OpenAPI 3.x",
+        "OpenAPI 3.0.x",
+        "OpenAPI 3.1.x",
+        "OpenAPI 3.2.x"
+      ],
+      "functions": [
+        "truthy"
+      ],
+      "properties": [
+        "operationId"
+      ],
+      "given": "#OperationObject",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/openapi-rules/#operation-operationId"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/oas/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/operation-operationId/"
+    },
+    {
+      "slug": "operation-operationId-unique",
+      "source": "built-in",
+      "ruleset": "spectral:oas",
+      "rulesetName": "OpenAPI",
+      "description": "Every operation must have unique \"operationId\".",
+      "message": null,
+      "recommended": true,
+      "severity": "error",
+      "formats": [
+        "OpenAPI 2.0 (Swagger)",
+        "OpenAPI 3.x",
+        "OpenAPI 3.0.x",
+        "OpenAPI 3.1.x",
+        "OpenAPI 3.2.x"
+      ],
+      "functions": [
+        "oasOpIdUnique"
+      ],
+      "properties": [
+        "paths"
+      ],
+      "given": "$.paths",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/openapi-rules/#operation-operationId-unique"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/oas/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/operation-operationId-unique/"
+    },
+    {
+      "slug": "operation-operationId-valid-in-url",
+      "source": "built-in",
+      "ruleset": "spectral:oas",
+      "rulesetName": "OpenAPI",
+      "description": "",
+      "message": "operationId must not contain characters that are invalid when used in URL.",
+      "recommended": true,
+      "severity": "warn",
+      "formats": [
+        "OpenAPI 2.0 (Swagger)",
+        "OpenAPI 3.x",
+        "OpenAPI 3.0.x",
+        "OpenAPI 3.1.x",
+        "OpenAPI 3.2.x"
+      ],
+      "functions": [
+        "pattern"
+      ],
+      "properties": [
+        "operationId"
+      ],
+      "given": "#OperationObject",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/openapi-rules/#operation-operationId-valid-in-url"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/oas/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/operation-operationId-valid-in-url/"
+    },
+    {
+      "slug": "operation-parameters",
+      "source": "built-in",
+      "ruleset": "spectral:oas",
+      "rulesetName": "OpenAPI",
+      "description": "Operation parameters are unique and non-repeating.",
+      "message": "{{error}}",
+      "recommended": true,
+      "severity": "warn",
+      "formats": [
+        "OpenAPI 2.0 (Swagger)",
+        "OpenAPI 3.x",
+        "OpenAPI 3.0.x",
+        "OpenAPI 3.1.x",
+        "OpenAPI 3.2.x"
+      ],
+      "functions": [
+        "oasOpParams"
+      ],
+      "properties": [
+        "parameters"
+      ],
+      "given": "#OperationObject.parameters",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/openapi-rules/#operation-parameters"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/oas/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/operation-parameters/"
+    },
+    {
+      "slug": "operation-singular-tag",
+      "source": "built-in",
+      "ruleset": "spectral:oas",
+      "rulesetName": "OpenAPI",
+      "description": "Operation must not have more than a single tag.",
+      "message": null,
+      "recommended": false,
+      "severity": "warn",
+      "formats": [
+        "OpenAPI 2.0 (Swagger)",
+        "OpenAPI 3.x",
+        "OpenAPI 3.0.x",
+        "OpenAPI 3.1.x",
+        "OpenAPI 3.2.x"
+      ],
+      "functions": [
+        "length"
+      ],
+      "properties": [
+        "tags"
+      ],
+      "given": "#OperationObject",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/openapi-rules/#operation-singular-tag"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/oas/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/operation-singular-tag/"
+    },
+    {
+      "slug": "operation-success-response",
+      "source": "built-in",
+      "ruleset": "spectral:oas",
+      "rulesetName": "OpenAPI",
+      "description": "Operation must have at least one \"2xx\" or \"3xx\" response.",
+      "message": null,
+      "recommended": true,
+      "severity": "warn",
+      "formats": [
+        "OpenAPI 2.0 (Swagger)",
+        "OpenAPI 3.x",
+        "OpenAPI 3.0.x",
+        "OpenAPI 3.1.x",
+        "OpenAPI 3.2.x"
+      ],
+      "functions": [
+        "oasOpSuccessResponse"
+      ],
+      "properties": [
+        "responses"
+      ],
+      "given": "#OperationObject",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/openapi-rules/#operation-success-response"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/oas/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/operation-success-response/"
+    },
+    {
+      "slug": "operation-summary",
+      "source": "specification",
+      "ruleset": null,
+      "rulesetName": "OpenLint Ruleset Specification",
+      "description": "Every operation needs a summary.",
+      "message": null,
+      "recommended": true,
+      "severity": "warn",
+      "formats": [
+        "OpenAPI 3.x"
+      ],
+      "functions": [
+        "truthy"
+      ],
+      "properties": [
+        "summary"
+      ],
+      "given": "$.paths[*]['get','put','post','delete','options','head','patch','trace']",
+      "links": [
+        {
+          "name": "OpenLint Ruleset Specification",
+          "url": "https://spec.openlint.org/v1/draft/#walkthrough"
+        }
+      ],
+      "url": "https://rules.openlint.org/operation-summary/"
+    },
+    {
+      "slug": "operation-tag-defined",
+      "source": "built-in",
+      "ruleset": "spectral:oas",
+      "rulesetName": "OpenAPI",
+      "description": "Operation tags must be defined in global tags.",
+      "message": null,
+      "recommended": true,
+      "severity": "warn",
+      "formats": [
+        "OpenAPI 2.0 (Swagger)",
+        "OpenAPI 3.x",
+        "OpenAPI 3.0.x",
+        "OpenAPI 3.1.x",
+        "OpenAPI 3.2.x"
+      ],
+      "functions": [
+        "oasTagDefined"
+      ],
+      "properties": [
+        "tags"
+      ],
+      "given": "$",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/openapi-rules/#operation-tag-defined"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/oas/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/operation-tag-defined/"
+    },
+    {
+      "slug": "operation-tags",
+      "source": "built-in",
+      "ruleset": "spectral:oas",
+      "rulesetName": "OpenAPI",
+      "description": "Operation must have non-empty \"tags\" array.",
+      "message": null,
+      "recommended": true,
+      "severity": "warn",
+      "formats": [
+        "OpenAPI 2.0 (Swagger)",
+        "OpenAPI 3.x",
+        "OpenAPI 3.0.x",
+        "OpenAPI 3.1.x",
+        "OpenAPI 3.2.x"
+      ],
+      "functions": [
+        "schema"
+      ],
+      "properties": [
+        "tags"
+      ],
+      "given": "#OperationObject",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/openapi-rules/#operation-tags"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/oas/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/operation-tags/"
+    },
+    {
+      "slug": "path-declarations-must-exist",
+      "source": "built-in",
+      "ruleset": "spectral:oas",
+      "rulesetName": "OpenAPI",
+      "description": "",
+      "message": "Path parameter declarations must not be empty, ex.\"/given/{}\" is invalid.",
+      "recommended": true,
+      "severity": "warn",
+      "formats": [
+        "OpenAPI 2.0 (Swagger)",
+        "OpenAPI 3.x",
+        "OpenAPI 3.0.x",
+        "OpenAPI 3.1.x",
+        "OpenAPI 3.2.x"
+      ],
+      "functions": [
+        "pattern"
+      ],
+      "properties": [
+        "paths"
+      ],
+      "given": "$.paths",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/openapi-rules/#path-declarations-must-exist"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/oas/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/path-declarations-must-exist/"
+    },
+    {
+      "slug": "path-keys-no-trailing-slash",
+      "source": "built-in",
+      "ruleset": "spectral:oas",
+      "rulesetName": "OpenAPI",
+      "description": "",
+      "message": "Path must not end with slash.",
+      "recommended": true,
+      "severity": "warn",
+      "formats": [
+        "OpenAPI 2.0 (Swagger)",
+        "OpenAPI 3.x",
+        "OpenAPI 3.0.x",
+        "OpenAPI 3.1.x",
+        "OpenAPI 3.2.x"
+      ],
+      "functions": [
+        "pattern"
+      ],
+      "properties": [
+        "paths"
+      ],
+      "given": "$.paths",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/openapi-rules/#path-keys-no-trailing-slash"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/oas/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/path-keys-no-trailing-slash/"
+    },
+    {
+      "slug": "path-not-include-query",
+      "source": "built-in",
+      "ruleset": "spectral:oas",
+      "rulesetName": "OpenAPI",
+      "description": "Path must not include query string.",
+      "message": null,
+      "recommended": true,
+      "severity": "warn",
+      "formats": [
+        "OpenAPI 2.0 (Swagger)",
+        "OpenAPI 3.x",
+        "OpenAPI 3.0.x",
+        "OpenAPI 3.1.x",
+        "OpenAPI 3.2.x"
+      ],
+      "functions": [
+        "pattern"
+      ],
+      "properties": [
+        "paths"
+      ],
+      "given": "$.paths",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/openapi-rules/#path-not-include-query"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/oas/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/path-not-include-query/"
+    },
+    {
+      "slug": "path-params",
+      "source": "built-in",
+      "ruleset": "spectral:oas",
+      "rulesetName": "OpenAPI",
+      "description": "Path parameters must be defined and valid.",
+      "message": "{{error}}",
+      "recommended": true,
+      "severity": "error",
+      "formats": [
+        "OpenAPI 2.0 (Swagger)",
+        "OpenAPI 3.x",
+        "OpenAPI 3.0.x",
+        "OpenAPI 3.1.x",
+        "OpenAPI 3.2.x"
+      ],
+      "functions": [
+        "oasPathParam"
+      ],
+      "properties": [
+        "paths"
+      ],
+      "given": "$.paths",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/openapi-rules/#path-params"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/oas/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/path-params/"
+    },
+    {
+      "slug": "server-https",
+      "source": "learn",
+      "ruleset": null,
+      "rulesetName": "OpenLint Learn",
+      "description": "Every server URL uses https.",
+      "message": "{{value}} must use https",
+      "recommended": true,
+      "severity": "warn",
+      "formats": [
+        "OpenAPI 3.x"
+      ],
+      "functions": [
+        "pattern"
+      ],
+      "properties": [
+        "url"
+      ],
+      "given": "#Servers.url",
+      "links": [
+        {
+          "name": "OpenLint Learn",
+          "url": "https://learn.openlint.org/snippets/"
+        }
+      ],
+      "url": "https://rules.openlint.org/server-https/"
+    },
+    {
+      "slug": "tag-description",
+      "source": "built-in",
+      "ruleset": "spectral:oas",
+      "rulesetName": "OpenAPI",
+      "description": "Tag object must have \"description\".",
+      "message": null,
+      "recommended": false,
+      "severity": "warn",
+      "formats": [
+        "OpenAPI 2.0 (Swagger)",
+        "OpenAPI 3.x",
+        "OpenAPI 3.0.x",
+        "OpenAPI 3.1.x",
+        "OpenAPI 3.2.x"
+      ],
+      "functions": [
+        "truthy"
+      ],
+      "properties": [
+        "description"
+      ],
+      "given": "$.tags[*]",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/openapi-rules/#tag-description"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/oas/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/tag-description/"
+    },
+    {
+      "slug": "typed-enum",
+      "source": "built-in",
+      "ruleset": "spectral:oas",
+      "rulesetName": "OpenAPI",
+      "description": "Enum values must respect the specified type.",
+      "message": "{{error}}",
+      "recommended": true,
+      "severity": "warn",
+      "formats": [
+        "OpenAPI 2.0 (Swagger)",
+        "OpenAPI 3.x",
+        "OpenAPI 3.0.x",
+        "OpenAPI 3.1.x",
+        "OpenAPI 3.2.x"
+      ],
+      "functions": [
+        "typedEnum"
+      ],
+      "properties": [
+        "enum"
+      ],
+      "given": "$..[?(@ && @.enum && @.type)]",
+      "links": [
+        {
+          "name": "Reference",
+          "url": "https://docs.openlint.org/reference/openapi-rules/#typed-enum"
+        },
+        {
+          "name": "Source",
+          "url": "https://github.com/openlint/openlint/blob/main/packages/rulesets/src/oas/index.ts"
+        }
+      ],
+      "url": "https://rules.openlint.org/typed-enum/"
+    }
+  ]
+}

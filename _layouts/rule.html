@@ -1,0 +1,41 @@
+---
+layout: default
+---
+{% assign r = page %}
+<p class="muted rule-meta"><span class="tag tag-{{ r.source }}">{% if r.source == 'built-in' %}{{ r.ruleset }}{% else %}{{ r.rulesetName }}{% endif %}</span> <span class="tag sev-{{ r.severity }}">{{ r.severity }}</span> {% if r.recommended %}<span class="tag">on by default</span>{% else %}<span class="tag tag-off">off by default</span>{% endif %}</p>
+<h1><code>{{ r.slug }}</code></h1>
+<p class="lede">{{ r.description | escape }}</p>
+
+<dl class="facts">
+  <dt>Applies to</dt>
+  <dd>{% for p in r.properties %}<a class="prop" href="/?property={{ p | url_encode }}"><code>{{ p }}</code></a>{% unless forloop.last %} {% endunless %}{% endfor %}</dd>
+  <dt>Selects</dt>
+  <dd>{% if r.given.first %}{% for g in r.given %}<code>{{ g | escape }}</code>{% unless forloop.last %}<br>{% endunless %}{% endfor %}{% else %}<code>{{ r.given | escape }}</code>{% endif %}</dd>
+  <dt>Function</dt>
+  <dd>{% for f in r.functions %}<code>{{ f }}</code>{% unless forloop.last %}, {% endunless %}{% endfor %}</dd>
+  {% if r.formats.size > 0 %}<dt>Formats</dt>
+  <dd>{{ r.formats | join: ', ' }}</dd>{% endif %}
+  {% if r.message %}<dt>Message</dt>
+  <dd><code>{{ r.message | escape }}</code></dd>{% endif %}
+</dl>
+
+<h2>Use it</h2>
+{% if r.source == 'built-in' %}
+<p>This rule ships with OpenLint in <code>{{ r.ruleset }}</code>.{% if r.recommended %} Extending the ruleset turns it on:{% else %} It's off by default, so turn it on by name:{% endif %}</p>
+<pre><code>extends: {{ r.ruleset }}
+rules:
+  {{ r.slug }}: {% if r.recommended %}{{ r.severity }}   # or off, or another severity{% else %}true{% endif %}</code></pre>
+<h2>Definition</h2>
+<p class="muted">As defined in <code>@openlint/openlint-rulesets</code>. Functions show by name.</p>
+{% else %}
+<p>This rule isn't built in. Copy it into your ruleset:</p>
+{% endif %}
+<pre><code>{{ r.definition | escape }}</code></pre>
+
+{% if content contains '<' %}
+<h2>About this rule</h2>
+<div class="docs">{{ content }}</div>
+{% endif %}
+
+<h2>Sources</h2>
+<ul class="links">{% for l in r.links %}<li><a href="{{ l.url }}">{{ l.name }}</a></li>{% endfor %}</ul>

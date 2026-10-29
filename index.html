@@ -1,0 +1,72 @@
+---
+layout: default
+summary: A registry of OpenLint rules. Search every rule in the built-in OpenAPI, AsyncAPI and Arazzo rulesets, the specification and the documentation, and filter by the property it applies to.
+---
+{% assign rules = site.rules | sort: 'slug' %}
+{% assign props = '' | split: '' %}{% for r in rules %}{% assign props = props | concat: r.properties %}{% endfor %}{% assign props = props | uniq | sort_natural %}
+<h1>Rules</h1>
+<p class="lede">Every OpenLint rule we know of, each with its own page: the {{ rules | where: 'source', 'built-in' | size }} rules in the built-in rulesets, plus examples from the <a href="https://spec.openlint.org">specification</a> and <a href="https://learn.openlint.org">learn</a>.</p>
+
+<form class="filters" role="search" onsubmit="return false">
+  <label class="search"><span class="sr">Search rules</span><input id="q" type="search" placeholder="Search rules, e.g. operationId, https, enum" autocomplete="off"></label>
+  <label><span>Property</span>
+    <select id="property"><option value="">Any property</option>{% for p in props %}<option value="{{ p }}">{{ p }}</option>{% endfor %}</select></label>
+  <label><span>Ruleset</span>
+    <select id="ruleset"><option value="">All</option><option value="spectral:oas">spectral:oas</option><option value="spectral:asyncapi">spectral:asyncapi</option><option value="spectral:arazzo">spectral:arazzo</option><option value="specification">Specification</option><option value="learn">Learn</option></select></label>
+  <label><span>Severity</span>
+    <select id="severity"><option value="">Any</option><option>error</option><option>warn</option><option>info</option><option>hint</option></select></label>
+  <label class="check"><input id="on" type="checkbox"> On by default</label>
+</form>
+<p class="muted count" id="count" aria-live="polite">{{ rules.size }} rules</p>
+
+<ul class="entries rules" id="rules">
+{% for r in rules %}<li data-props="{{ r.properties | join: ' ' }}" data-ruleset="{% if r.ruleset %}{{ r.ruleset }}{% else %}{{ r.source }}{% endif %}" data-severity="{{ r.severity }}" data-on="{{ r.recommended }}" data-text="{{ r.slug }} {{ r.description | escape | downcase }} {{ r.properties | join: ' ' | downcase }} {{ r.functions | join: ' ' | downcase }}">
+  <a class="name" href="{{ r.url }}"><code>{{ r.slug }}</code></a>
+  <span class="tags"><span class="tag tag-{{ r.source }}">{% if r.ruleset %}{{ r.ruleset }}{% else %}{{ r.rulesetName }}{% endif %}</span> <span class="tag sev-{{ r.severity }}">{{ r.severity }}</span>{% unless r.recommended %} <span class="tag tag-off">off by default</span>{% endunless %}</span>
+  <p>{{ r.description | escape }}</p>
+  <p class="applies">{% for p in r.properties %}<button type="button" class="prop" data-p="{{ p }}"><code>{{ p }}</code></button>{% endfor %}</p>
+</li>
+{% endfor %}</ul>
+<p class="muted" id="none" hidden>No rules match. <a href="/">Clear the filters</a>.</p>
+
+<p class="muted">The same list as data: <a href="/rules.json">rules.json</a>. Rules are generated from <code>@openlint/openlint-rulesets</code>, the toolbox's reference docs and the specification; see <a href="https://github.com/openlint/rules">openlint/rules</a> to add one.</p>
+
+<script>
+(function () {
+  var ids = ['q', 'property', 'ruleset', 'severity', 'on'];
+  var el = {}; ids.forEach(function (k) { el[k] = document.getElementById(k); });
+  var items = [].slice.call(document.querySelectorAll('#rules > li'));
+  var params = new URLSearchParams(location.search);
+  if (params.get('q')) el.q.value = params.get('q');
+  ['property', 'ruleset', 'severity'].forEach(function (k) { if (params.get(k)) el[k].value = params.get(k); });
+  el.on.checked = params.get('on') === '1';
+
+  function apply() {
+    var q = el.q.value.trim().toLowerCase().split(/\s+/).filter(Boolean);
+    var shown = 0;
+    items.forEach(function (li) {
+      var d = li.dataset;
+      var ok = q.every(function (w) { return d.text.indexOf(w) !== -1; })
+        && (!el.property.value || (' ' + d.props + ' ').indexOf(' ' + el.property.value + ' ') !== -1)
+        && (!el.ruleset.value || d.ruleset === el.ruleset.value)
+        && (!el.severity.value || d.severity === el.severity.value)
+        && (!el.on.checked || d.on === 'true');
+      li.hidden = !ok; if (ok) shown++;
+    });
+    document.getElementById('count').textContent = shown + (shown === 1 ? ' rule' : ' rules');
+    document.getElementById('none').hidden = shown !== 0;
+    var p = new URLSearchParams();
+    if (el.q.value.trim()) p.set('q', el.q.value.trim());
+    ['property', 'ruleset', 'severity'].forEach(function (k) { if (el[k].value) p.set(k, el[k].value); });
+    if (el.on.checked) p.set('on', '1');
+    var s = p.toString();
+    history.replaceState(null, '', s ? '?' + s : location.pathname);
+  }
+  ids.forEach(function (k) { el[k].addEventListener(k === 'q' ? 'input' : 'change', apply); });
+  document.getElementById('rules').addEventListener('click', function (e) {
+    var b = e.target.closest('button.prop'); if (!b) return;
+    el.property.value = b.dataset.p; apply(); el.property.focus();
+  });
+  apply();
+})();
+</script>

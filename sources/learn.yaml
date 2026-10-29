@@ -1,0 +1,25 @@
+# Rules from learn.openlint.org.
+source: learn
+name: OpenLint Learn
+url: https://learn.openlint.org/snippets/
+formats: [OpenAPI 3.x]
+aliases:
+  Servers:
+    - $.servers[*]
+    - $.paths[*].servers[*]
+    - $.paths[*][get,put,post,delete,options,head,patch,trace].servers[*]
+    - $..callbacks[*][*].servers[*]
+    - $..callbacks[*][*][get,put,post,delete,options,head,patch,trace].servers[*]
+rules:
+  server-https:
+    description: Every server URL uses https.
+    message: "{{value}} must use https"
+    given: "#Servers.url"
+    then:
+      function: pattern
+      functionOptions:
+        match: "^https://"
+    notes: |
+      The built-in server rules check only the top-level `servers`. OpenAPI 3 also allows `servers` on path items and operations, including operations inside callbacks, and a recursive `$..servers` also catches unrelated properties named `servers` in schemas and examples. The `Servers` alias selects exactly the real ones.
+
+      Tested with OpenLint 1.0.0 on a document with `servers` at the root, on a path, on an operation and in a callback, plus a schema and an example with a `servers` property: it reported the four real ones and neither of the others.

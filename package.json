@@ -1,0 +1,13 @@
+{
+  "name": "openlint-rules",
+  "private": true,
+  "description": "Generates rules.openlint.org from the built-in rulesets, the reference docs and the example rules in sources/.",
+  "license": "Apache-2.0",
+  "scripts": {
+    "build": "node tools/build.cjs --docs ../openlint"
+  },
+  "dependencies": {
+    "@stoplight/yaml": "4.3.0",
+    "openlint": "1.0.0"
+  }
+}

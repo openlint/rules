@@ -1,0 +1,38 @@
+# The running example in the OpenLint Ruleset Specification (v1 draft, "A running example").
+# Copied from spec/v1/conformance/linter/walkthrough/.
+source: specification
+name: OpenLint Ruleset Specification
+url: https://spec.openlint.org/v1/draft/#walkthrough
+formats: [OpenAPI 3.x]
+aliases:
+  Operation:
+    - "$.paths[*]['get','put','post','delete']"
+rules:
+  operation-summary:
+    description: Every operation needs a summary.
+    severity: warn
+    given: $.paths[*]['get','put','post','delete','options','head','patch','trace']
+    then:
+      field: summary
+      function: truthy
+    notes: |
+      From the specification's running example, where it is defined in a shared base ruleset (`acme-base.yaml`) and raised to `error` for files under `legacy/` with an override.
+  operation-id-camel-case:
+    description: operationId is written in camelCase.
+    recommended: false
+    given: $.paths[*]['get','put','post','delete','options','head','patch','trace'].operationId
+    then:
+      function: casing
+      functionOptions:
+        type: camel
+    notes: |
+      From the specification's running example. It is defined with `recommended: false`, so it is off until a ruleset turns it on with the shorthand `operation-id-camel-case: true`.
+  operation-has-tags:
+    description: Every operation is tagged.
+    severity: hint
+    given: "#Operation"
+    then:
+      field: tags
+      function: defined
+    notes: |
+      From the specification's running example. `#Operation` is an alias the example ruleset declares; copy the `aliases` block with the rule.
