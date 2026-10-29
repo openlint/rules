@@ -13,6 +13,8 @@ recommended: true
 severity: error
 formats:
   - AsyncAPI 3.x
+specs:
+  - AsyncAPI 3.x
 functions:
   - schema
 properties:

@@ -16,6 +16,9 @@
       "formats": [
         "Arazzo 1.0.x"
       ],
+      "specs": [
+        "Arazzo 1.0"
+      ],
       "functions": [
         "arazzoDocumentSchema"
       ],
@@ -46,6 +49,9 @@
       "severity": "warn",
       "formats": [
         "Arazzo 1.0.x"
+      ],
+      "specs": [
+        "Arazzo 1.0"
       ],
       "functions": [
         "truthy"
@@ -78,6 +84,9 @@
       "formats": [
         "Arazzo 1.0.x"
       ],
+      "specs": [
+        "Arazzo 1.0"
+      ],
       "functions": [
         "truthy"
       ],
@@ -108,6 +117,9 @@
       "severity": "warn",
       "formats": [
         "Arazzo 1.0.x"
+      ],
+      "specs": [
+        "Arazzo 1.0"
       ],
       "functions": [
         "pattern"
@@ -141,6 +153,9 @@
       "formats": [
         "Arazzo 1.0.x"
       ],
+      "specs": [
+        "Arazzo 1.0"
+      ],
       "functions": [
         "truthy"
       ],
@@ -171,6 +186,9 @@
       "severity": "warn",
       "formats": [
         "Arazzo 1.0.x"
+      ],
+      "specs": [
+        "Arazzo 1.0"
       ],
       "functions": [
         "truthy"
@@ -203,6 +221,9 @@
       "formats": [
         "Arazzo 1.0.x"
       ],
+      "specs": [
+        "Arazzo 1.0"
+      ],
       "functions": [
         "arazzoStepFailureActionsValidation"
       ],
@@ -233,6 +254,9 @@
       "severity": "hint",
       "formats": [
         "Arazzo 1.0.x"
+      ],
+      "specs": [
+        "Arazzo 1.0"
       ],
       "functions": [
         "falsy"
@@ -265,6 +289,9 @@
       "formats": [
         "Arazzo 1.0.x"
       ],
+      "specs": [
+        "Arazzo 1.0"
+      ],
       "functions": [
         "arazzoStepOutputNamesValidation"
       ],
@@ -295,6 +322,9 @@
       "severity": "error",
       "formats": [
         "Arazzo 1.0.x"
+      ],
+      "specs": [
+        "Arazzo 1.0"
       ],
       "functions": [
         "arazzoStepParametersValidation"
@@ -327,6 +357,9 @@
       "formats": [
         "Arazzo 1.0.x"
       ],
+      "specs": [
+        "Arazzo 1.0"
+      ],
       "functions": [
         "arazzoStepRequestBodyValidation"
       ],
@@ -357,6 +390,9 @@
       "severity": "warn",
       "formats": [
         "Arazzo 1.0.x"
+      ],
+      "specs": [
+        "Arazzo 1.0"
       ],
       "functions": [
         "pattern"
@@ -389,6 +425,9 @@
       "formats": [
         "Arazzo 1.0.x"
       ],
+      "specs": [
+        "Arazzo 1.0"
+      ],
       "functions": [
         "arazzoStepSuccessActionsValidation"
       ],
@@ -419,6 +458,9 @@
       "severity": "error",
       "formats": [
         "Arazzo 1.0.x"
+      ],
+      "specs": [
+        "Arazzo 1.0"
       ],
       "functions": [
         "arazzoStepSuccessCriteriaValidation"
@@ -451,6 +493,9 @@
       "formats": [
         "Arazzo 1.0.x"
       ],
+      "specs": [
+        "Arazzo 1.0"
+      ],
       "functions": [
         "arazzoStepValidation"
       ],
@@ -481,6 +526,9 @@
       "severity": "error",
       "formats": [
         "Arazzo 1.0.x"
+      ],
+      "specs": [
+        "Arazzo 1.0"
       ],
       "functions": [
         "arazzoWorkflowDependsOnValidation"
@@ -513,6 +561,9 @@
       "formats": [
         "Arazzo 1.0.x"
       ],
+      "specs": [
+        "Arazzo 1.0"
+      ],
       "functions": [
         "truthy"
       ],
@@ -543,6 +594,9 @@
       "severity": "error",
       "formats": [
         "Arazzo 1.0.x"
+      ],
+      "specs": [
+        "Arazzo 1.0"
       ],
       "functions": [
         "arazzoWorkflowOutputNamesValidation"
@@ -575,6 +629,9 @@
       "formats": [
         "Arazzo 1.0.x"
       ],
+      "specs": [
+        "Arazzo 1.0"
+      ],
       "functions": [
         "arazzoStepIdUniqueness"
       ],
@@ -605,6 +662,9 @@
       "severity": "hint",
       "formats": [
         "Arazzo 1.0.x"
+      ],
+      "specs": [
+        "Arazzo 1.0"
       ],
       "functions": [
         "truthy"
@@ -637,6 +697,9 @@
       "formats": [
         "Arazzo 1.0.x"
       ],
+      "specs": [
+        "Arazzo 1.0"
+      ],
       "functions": [
         "pattern"
       ],
@@ -667,6 +730,9 @@
       "severity": "error",
       "formats": [
         "Arazzo 1.0.x"
+      ],
+      "specs": [
+        "Arazzo 1.0"
       ],
       "functions": [
         "arazzoWorkflowIdUniqueness"
@@ -703,6 +769,12 @@
         "OpenAPI 3.1.x",
         "OpenAPI 3.2.x"
       ],
+      "specs": [
+        "OpenAPI 2.0",
+        "OpenAPI 3.0",
+        "OpenAPI 3.1",
+        "OpenAPI 3.2"
+      ],
       "functions": [
         "truthy"
       ],
@@ -732,6 +804,9 @@
       "recommended": true,
       "severity": "warn",
       "formats": [
+        "AsyncAPI 3.x"
+      ],
+      "specs": [
         "AsyncAPI 3.x"
       ],
       "functions": [
@@ -765,6 +840,9 @@
       "formats": [
         "AsyncAPI 3.x"
       ],
+      "specs": [
+        "AsyncAPI 3.x"
+      ],
       "functions": [
         "pattern"
       ],
@@ -794,6 +872,9 @@
       "recommended": true,
       "severity": "warn",
       "formats": [
+        "AsyncAPI 3.x"
+      ],
+      "specs": [
         "AsyncAPI 3.x"
       ],
       "functions": [
@@ -827,6 +908,9 @@
       "formats": [
         "AsyncAPI 3.x"
       ],
+      "specs": [
+        "AsyncAPI 3.x"
+      ],
       "functions": [
         "pattern"
       ],
@@ -856,6 +940,9 @@
       "recommended": true,
       "severity": "error",
       "formats": [
+        "AsyncAPI 3.x"
+      ],
+      "specs": [
         "AsyncAPI 3.x"
       ],
       "functions": [
@@ -889,6 +976,9 @@
       "formats": [
         "AsyncAPI 3.x"
       ],
+      "specs": [
+        "AsyncAPI 3.x"
+      ],
       "functions": [
         "function"
       ],
@@ -918,6 +1008,9 @@
       "recommended": true,
       "severity": "error",
       "formats": [
+        "AsyncAPI 3.x"
+      ],
+      "specs": [
         "AsyncAPI 3.x"
       ],
       "functions": [
@@ -956,6 +1049,9 @@
       "formats": [
         "AsyncAPI 3.x"
       ],
+      "specs": [
+        "AsyncAPI 3.x"
+      ],
       "functions": [
         "truthy"
       ],
@@ -987,6 +1083,9 @@
       "formats": [
         "AsyncAPI 3.x"
       ],
+      "specs": [
+        "AsyncAPI 3.x"
+      ],
       "functions": [
         "asyncApiSecurity"
       ],
@@ -1016,6 +1115,9 @@
       "recommended": true,
       "severity": "info",
       "formats": [
+        "AsyncAPI 3.x"
+      ],
+      "specs": [
         "AsyncAPI 3.x"
       ],
       "functions": [
@@ -1050,6 +1152,9 @@
       "recommended": true,
       "severity": "warn",
       "formats": [
+        "AsyncAPI 3.x"
+      ],
+      "specs": [
         "AsyncAPI 3.x"
       ],
       "functions": [
@@ -1087,6 +1192,9 @@
       "formats": [
         "AsyncAPI 3.x"
       ],
+      "specs": [
+        "AsyncAPI 3.x"
+      ],
       "functions": [
         "pattern"
       ],
@@ -1116,6 +1224,9 @@
       "recommended": false,
       "severity": "warn",
       "formats": [
+        "AsyncAPI 3.x"
+      ],
+      "specs": [
         "AsyncAPI 3.x"
       ],
       "functions": [
@@ -1149,6 +1260,9 @@
       "formats": [
         "AsyncAPI 3.x"
       ],
+      "specs": [
+        "AsyncAPI 3.x"
+      ],
       "functions": [
         "truthy"
       ],
@@ -1178,6 +1292,9 @@
       "recommended": true,
       "severity": "warn",
       "formats": [
+        "AsyncAPI 3.x"
+      ],
+      "specs": [
         "AsyncAPI 3.x"
       ],
       "functions": [
@@ -1213,6 +1330,9 @@
       "formats": [
         "AsyncAPI 3.x"
       ],
+      "specs": [
+        "AsyncAPI 3.x"
+      ],
       "functions": [
         "alphabetical"
       ],
@@ -1242,6 +1362,9 @@
       "recommended": true,
       "severity": "error",
       "formats": [
+        "AsyncAPI 3.x"
+      ],
+      "specs": [
         "AsyncAPI 3.x"
       ],
       "functions": [
@@ -1291,6 +1414,9 @@
       "formats": [
         "AsyncAPI 2.x"
       ],
+      "specs": [
+        "AsyncAPI 2.x"
+      ],
       "functions": [
         "pattern"
       ],
@@ -1320,6 +1446,9 @@
       "recommended": true,
       "severity": "warn",
       "formats": [
+        "AsyncAPI 2.x"
+      ],
+      "specs": [
         "AsyncAPI 2.x"
       ],
       "functions": [
@@ -1353,6 +1482,9 @@
       "formats": [
         "AsyncAPI 2.x"
       ],
+      "specs": [
+        "AsyncAPI 2.x"
+      ],
       "functions": [
         "pattern"
       ],
@@ -1382,6 +1514,10 @@
       "recommended": true,
       "severity": "error",
       "formats": [
+        "AsyncAPI 2.x",
+        "AsyncAPI 3.x"
+      ],
+      "specs": [
         "AsyncAPI 2.x",
         "AsyncAPI 3.x"
       ],
@@ -1419,6 +1555,9 @@
       "formats": [
         "AsyncAPI 2.x"
       ],
+      "specs": [
+        "AsyncAPI 2.x"
+      ],
       "functions": [
         "asyncApi2ChannelServers"
       ],
@@ -1448,6 +1587,9 @@
       "recommended": true,
       "severity": "error",
       "formats": [
+        "AsyncAPI 2.x"
+      ],
+      "specs": [
         "AsyncAPI 2.x"
       ],
       "functions": [
@@ -1487,6 +1629,10 @@
         "AsyncAPI 2.x",
         "AsyncAPI 3.x"
       ],
+      "specs": [
+        "AsyncAPI 2.x",
+        "AsyncAPI 3.x"
+      ],
       "functions": [
         "truthy"
       ],
@@ -1516,6 +1662,10 @@
       "recommended": true,
       "severity": "warn",
       "formats": [
+        "AsyncAPI 2.x",
+        "AsyncAPI 3.x"
+      ],
+      "specs": [
         "AsyncAPI 2.x",
         "AsyncAPI 3.x"
       ],
@@ -1553,6 +1703,10 @@
         "AsyncAPI 2.x",
         "AsyncAPI 3.x"
       ],
+      "specs": [
+        "AsyncAPI 2.x",
+        "AsyncAPI 3.x"
+      ],
       "functions": [
         "truthy"
       ],
@@ -1582,6 +1736,10 @@
       "recommended": true,
       "severity": "warn",
       "formats": [
+        "AsyncAPI 2.x",
+        "AsyncAPI 3.x"
+      ],
+      "specs": [
         "AsyncAPI 2.x",
         "AsyncAPI 3.x"
       ],
@@ -1617,6 +1775,10 @@
         "AsyncAPI 2.x",
         "AsyncAPI 3.x"
       ],
+      "specs": [
+        "AsyncAPI 2.x",
+        "AsyncAPI 3.x"
+      ],
       "functions": [
         "truthy"
       ],
@@ -1649,6 +1811,10 @@
         "AsyncAPI 2.x",
         "AsyncAPI 3.x"
       ],
+      "specs": [
+        "AsyncAPI 2.x",
+        "AsyncAPI 3.x"
+      ],
       "functions": [
         "schema"
       ],
@@ -1678,6 +1844,9 @@
       "recommended": true,
       "severity": "error",
       "formats": [
+        "AsyncAPI 2.x"
+      ],
+      "specs": [
         "AsyncAPI 2.x"
       ],
       "functions": [
@@ -1727,6 +1896,9 @@
       "formats": [
         "AsyncAPI 2.x"
       ],
+      "specs": [
+        "AsyncAPI 2.x"
+      ],
       "functions": [
         "asyncApi2MessageIdUniqueness"
       ],
@@ -1756,6 +1928,9 @@
       "recommended": true,
       "severity": "warn",
       "formats": [
+        "AsyncAPI 2.x"
+      ],
+      "specs": [
         "AsyncAPI 2.x"
       ],
       "functions": [
@@ -1789,6 +1964,9 @@
       "formats": [
         "AsyncAPI 2.x"
       ],
+      "specs": [
+        "AsyncAPI 2.x"
+      ],
       "functions": [
         "truthy"
       ],
@@ -1818,6 +1996,9 @@
       "recommended": true,
       "severity": "error",
       "formats": [
+        "AsyncAPI 2.x"
+      ],
+      "specs": [
         "AsyncAPI 2.x"
       ],
       "functions": [
@@ -1851,6 +2032,9 @@
       "formats": [
         "AsyncAPI 2.x"
       ],
+      "specs": [
+        "AsyncAPI 2.x"
+      ],
       "functions": [
         "asyncApiSecurity"
       ],
@@ -1880,6 +2064,10 @@
       "recommended": false,
       "severity": "warn",
       "formats": [
+        "AsyncAPI 2.x",
+        "AsyncAPI 3.x"
+      ],
+      "specs": [
         "AsyncAPI 2.x",
         "AsyncAPI 3.x"
       ],
@@ -1917,6 +2105,9 @@
       "formats": [
         "AsyncAPI 2.x"
       ],
+      "specs": [
+        "AsyncAPI 2.x"
+      ],
       "functions": [
         "asyncApiPayloadValidation"
       ],
@@ -1950,6 +2141,9 @@
       "recommended": true,
       "severity": "error",
       "formats": [
+        "AsyncAPI 2.x"
+      ],
+      "specs": [
         "AsyncAPI 2.x"
       ],
       "functions": [
@@ -1987,6 +2181,9 @@
       "formats": [
         "AsyncAPI 2.x"
       ],
+      "specs": [
+        "AsyncAPI 2.x"
+      ],
       "functions": [
         "asyncApiSchemaValidation"
       ],
@@ -2020,6 +2217,9 @@
       "recommended": true,
       "severity": "info",
       "formats": [
+        "AsyncAPI 2.x"
+      ],
+      "specs": [
         "AsyncAPI 2.x"
       ],
       "functions": [
@@ -2057,6 +2257,9 @@
       "formats": [
         "AsyncAPI 2.x"
       ],
+      "specs": [
+        "AsyncAPI 2.x"
+      ],
       "functions": [
         "function"
       ],
@@ -2086,6 +2289,9 @@
       "recommended": true,
       "severity": "error",
       "formats": [
+        "AsyncAPI 2.x"
+      ],
+      "specs": [
         "AsyncAPI 2.x"
       ],
       "functions": [
@@ -2123,6 +2329,9 @@
       "formats": [
         "AsyncAPI 2.x"
       ],
+      "specs": [
+        "AsyncAPI 2.x"
+      ],
       "functions": [
         "asyncApiSchemaValidation"
       ],
@@ -2158,6 +2367,9 @@
       "formats": [
         "AsyncAPI 2.x"
       ],
+      "specs": [
+        "AsyncAPI 2.x"
+      ],
       "functions": [
         "pattern"
       ],
@@ -2187,6 +2399,9 @@
       "recommended": true,
       "severity": "warn",
       "formats": [
+        "AsyncAPI 2.x"
+      ],
+      "specs": [
         "AsyncAPI 2.x"
       ],
       "functions": [
@@ -2220,6 +2435,9 @@
       "formats": [
         "AsyncAPI 2.x"
       ],
+      "specs": [
+        "AsyncAPI 2.x"
+      ],
       "functions": [
         "pattern"
       ],
@@ -2251,6 +2469,9 @@
       "formats": [
         "AsyncAPI 2.x"
       ],
+      "specs": [
+        "AsyncAPI 2.x"
+      ],
       "functions": [
         "asyncApiSecurity"
       ],
@@ -2280,6 +2501,9 @@
       "recommended": true,
       "severity": "error",
       "formats": [
+        "AsyncAPI 2.x"
+      ],
+      "specs": [
         "AsyncAPI 2.x"
       ],
       "functions": [
@@ -2317,6 +2541,10 @@
         "AsyncAPI 2.x",
         "AsyncAPI 3.x"
       ],
+      "specs": [
+        "AsyncAPI 2.x",
+        "AsyncAPI 3.x"
+      ],
       "functions": [
         "schema"
       ],
@@ -2346,6 +2574,9 @@
       "recommended": false,
       "severity": "warn",
       "formats": [
+        "AsyncAPI 2.x"
+      ],
+      "specs": [
         "AsyncAPI 2.x"
       ],
       "functions": [
@@ -2379,6 +2610,9 @@
       "formats": [
         "AsyncAPI 2.x"
       ],
+      "specs": [
+        "AsyncAPI 2.x"
+      ],
       "functions": [
         "truthy"
       ],
@@ -2410,6 +2644,9 @@
       "formats": [
         "AsyncAPI 2.x"
       ],
+      "specs": [
+        "AsyncAPI 2.x"
+      ],
       "functions": [
         "alphabetical"
       ],
@@ -2439,6 +2676,9 @@
       "recommended": true,
       "severity": "error",
       "formats": [
+        "AsyncAPI 2.x"
+      ],
+      "specs": [
         "AsyncAPI 2.x"
       ],
       "functions": [
@@ -2493,6 +2733,10 @@
         "AsyncAPI 2.x",
         "AsyncAPI 3.x"
       ],
+      "specs": [
+        "AsyncAPI 2.x",
+        "AsyncAPI 3.x"
+      ],
       "functions": [
         "unreferencedReusableObject"
       ],
@@ -2522,6 +2766,10 @@
       "recommended": true,
       "severity": "warn",
       "formats": [
+        "AsyncAPI 2.x",
+        "AsyncAPI 3.x"
+      ],
+      "specs": [
         "AsyncAPI 2.x",
         "AsyncAPI 3.x"
       ],
@@ -2560,6 +2808,12 @@
         "OpenAPI 3.1.x",
         "OpenAPI 3.2.x"
       ],
+      "specs": [
+        "OpenAPI 2.0",
+        "OpenAPI 3.0",
+        "OpenAPI 3.1",
+        "OpenAPI 3.2"
+      ],
       "functions": [
         "truthy"
       ],
@@ -2596,6 +2850,12 @@
         "OpenAPI 3.0.x",
         "OpenAPI 3.1.x",
         "OpenAPI 3.2.x"
+      ],
+      "specs": [
+        "OpenAPI 2.0",
+        "OpenAPI 3.0",
+        "OpenAPI 3.1",
+        "OpenAPI 3.2"
       ],
       "functions": [
         "oasSchema"
@@ -2634,6 +2894,12 @@
         "OpenAPI 3.1.x",
         "OpenAPI 3.2.x"
       ],
+      "specs": [
+        "OpenAPI 2.0",
+        "OpenAPI 3.0",
+        "OpenAPI 3.1",
+        "OpenAPI 3.2"
+      ],
       "functions": [
         "truthy"
       ],
@@ -2668,6 +2934,12 @@
         "OpenAPI 3.0.x",
         "OpenAPI 3.1.x",
         "OpenAPI 3.2.x"
+      ],
+      "specs": [
+        "OpenAPI 2.0",
+        "OpenAPI 3.0",
+        "OpenAPI 3.1",
+        "OpenAPI 3.2"
       ],
       "functions": [
         "truthy"
@@ -2704,6 +2976,12 @@
         "OpenAPI 3.1.x",
         "OpenAPI 3.2.x"
       ],
+      "specs": [
+        "OpenAPI 2.0",
+        "OpenAPI 3.0",
+        "OpenAPI 3.1",
+        "OpenAPI 3.2"
+      ],
       "functions": [
         "truthy"
       ],
@@ -2739,6 +3017,12 @@
         "OpenAPI 3.1.x",
         "OpenAPI 3.2.x"
       ],
+      "specs": [
+        "OpenAPI 2.0",
+        "OpenAPI 3.0",
+        "OpenAPI 3.1",
+        "OpenAPI 3.2"
+      ],
       "functions": [
         "truthy"
       ],
@@ -2770,6 +3054,10 @@
       "formats": [
         "OpenAPI 2.0 (Swagger)",
         "OpenAPI 3.0.x"
+      ],
+      "specs": [
+        "OpenAPI 2.0",
+        "OpenAPI 3.0"
       ],
       "functions": [
         "refSiblings"
@@ -2805,6 +3093,12 @@
         "OpenAPI 3.0.x",
         "OpenAPI 3.1.x",
         "OpenAPI 3.2.x"
+      ],
+      "specs": [
+        "OpenAPI 2.0",
+        "OpenAPI 3.0",
+        "OpenAPI 3.1",
+        "OpenAPI 3.2"
       ],
       "functions": [
         "pattern"
@@ -2842,6 +3136,12 @@
         "OpenAPI 3.1.x",
         "OpenAPI 3.2.x"
       ],
+      "specs": [
+        "OpenAPI 2.0",
+        "OpenAPI 3.0",
+        "OpenAPI 3.1",
+        "OpenAPI 3.2"
+      ],
       "functions": [
         "pattern"
       ],
@@ -2874,6 +3174,9 @@
       "formats": [
         "OpenAPI 2.0 (Swagger)"
       ],
+      "specs": [
+        "OpenAPI 2.0"
+      ],
       "functions": [
         "undefined"
       ],
@@ -2904,6 +3207,9 @@
       "severity": "warn",
       "formats": [
         "OpenAPI 2.0 (Swagger)"
+      ],
+      "specs": [
+        "OpenAPI 2.0"
       ],
       "functions": [
         "truthy"
@@ -2936,6 +3242,9 @@
       "formats": [
         "OpenAPI 2.0 (Swagger)"
       ],
+      "specs": [
+        "OpenAPI 2.0"
+      ],
       "functions": [
         "schema"
       ],
@@ -2966,6 +3275,9 @@
       "severity": "error",
       "formats": [
         "OpenAPI 2.0 (Swagger)"
+      ],
+      "specs": [
+        "OpenAPI 2.0"
       ],
       "functions": [
         "oasDiscriminator"
@@ -2998,6 +3310,9 @@
       "formats": [
         "OpenAPI 2.0 (Swagger)"
       ],
+      "specs": [
+        "OpenAPI 2.0"
+      ],
       "functions": [
         "pattern"
       ],
@@ -3028,6 +3343,9 @@
       "severity": "warn",
       "formats": [
         "OpenAPI 2.0 (Swagger)"
+      ],
+      "specs": [
+        "OpenAPI 2.0"
       ],
       "functions": [
         "pattern"
@@ -3060,6 +3378,9 @@
       "formats": [
         "OpenAPI 2.0 (Swagger)"
       ],
+      "specs": [
+        "OpenAPI 2.0"
+      ],
       "functions": [
         "undefined"
       ],
@@ -3090,6 +3411,9 @@
       "severity": "warn",
       "formats": [
         "OpenAPI 2.0 (Swagger)"
+      ],
+      "specs": [
+        "OpenAPI 2.0"
       ],
       "functions": [
         "oasOpFormDataConsumeCheck"
@@ -3122,6 +3446,9 @@
       "formats": [
         "OpenAPI 2.0 (Swagger)"
       ],
+      "specs": [
+        "OpenAPI 2.0"
+      ],
       "functions": [
         "oasSecurityDefined"
       ],
@@ -3152,6 +3479,9 @@
       "severity": "warn",
       "formats": [
         "OpenAPI 2.0 (Swagger)"
+      ],
+      "specs": [
+        "OpenAPI 2.0"
       ],
       "functions": [
         "truthy"
@@ -3184,6 +3514,9 @@
       "formats": [
         "OpenAPI 2.0 (Swagger)"
       ],
+      "specs": [
+        "OpenAPI 2.0"
+      ],
       "functions": [
         "oasDocumentSchema"
       ],
@@ -3214,6 +3547,9 @@
       "severity": "warn",
       "formats": [
         "OpenAPI 2.0 (Swagger)"
+      ],
+      "specs": [
+        "OpenAPI 2.0"
       ],
       "functions": [
         "unreferencedReusableObject"
@@ -3246,6 +3582,9 @@
       "formats": [
         "OpenAPI 2.0 (Swagger)"
       ],
+      "specs": [
+        "OpenAPI 2.0"
+      ],
       "functions": [
         "oasExample"
       ],
@@ -3276,6 +3615,9 @@
       "severity": "error",
       "formats": [
         "OpenAPI 2.0 (Swagger)"
+      ],
+      "specs": [
+        "OpenAPI 2.0"
       ],
       "functions": [
         "oasExample"
@@ -3313,6 +3655,10 @@
         "OpenAPI 3.1.x",
         "OpenAPI 3.2.x"
       ],
+      "specs": [
+        "OpenAPI 3.1",
+        "OpenAPI 3.2"
+      ],
       "functions": [
         "undefined"
       ],
@@ -3346,6 +3692,10 @@
       "formats": [
         "OpenAPI 3.1.x",
         "OpenAPI 3.2.x"
+      ],
+      "specs": [
+        "OpenAPI 3.1",
+        "OpenAPI 3.2"
       ],
       "functions": [
         "undefined"
@@ -3381,6 +3731,9 @@
       "formats": [
         "OpenAPI 3.2.x"
       ],
+      "specs": [
+        "OpenAPI 3.2"
+      ],
       "functions": [
         "schema"
       ],
@@ -3414,6 +3767,11 @@
       "formats": [
         "OpenAPI 3.x"
       ],
+      "specs": [
+        "OpenAPI 3.0",
+        "OpenAPI 3.1",
+        "OpenAPI 3.2"
+      ],
       "functions": [
         "schema"
       ],
@@ -3444,6 +3802,11 @@
       "severity": "warn",
       "formats": [
         "OpenAPI 3.x"
+      ],
+      "specs": [
+        "OpenAPI 3.0",
+        "OpenAPI 3.1",
+        "OpenAPI 3.2"
       ],
       "functions": [
         "undefined"
@@ -3477,6 +3840,11 @@
       "severity": "warn",
       "formats": [
         "OpenAPI 3.x"
+      ],
+      "specs": [
+        "OpenAPI 3.0",
+        "OpenAPI 3.1",
+        "OpenAPI 3.2"
       ],
       "functions": [
         "xor"
@@ -3516,6 +3884,11 @@
       "formats": [
         "OpenAPI 3.x"
       ],
+      "specs": [
+        "OpenAPI 3.0",
+        "OpenAPI 3.1",
+        "OpenAPI 3.2"
+      ],
       "functions": [
         "oasSecurityDefined"
       ],
@@ -3546,6 +3919,11 @@
       "severity": "warn",
       "formats": [
         "OpenAPI 3.x"
+      ],
+      "specs": [
+        "OpenAPI 3.0",
+        "OpenAPI 3.1",
+        "OpenAPI 3.2"
       ],
       "functions": [
         "truthy"
@@ -3582,6 +3960,11 @@
       "formats": [
         "OpenAPI 3.x"
       ],
+      "specs": [
+        "OpenAPI 3.0",
+        "OpenAPI 3.1",
+        "OpenAPI 3.2"
+      ],
       "functions": [
         "oasDocumentSchema"
       ],
@@ -3613,6 +3996,11 @@
       "formats": [
         "OpenAPI 3.x"
       ],
+      "specs": [
+        "OpenAPI 3.0",
+        "OpenAPI 3.1",
+        "OpenAPI 3.2"
+      ],
       "functions": [
         "pattern"
       ],
@@ -3643,6 +4031,11 @@
       "severity": "warn",
       "formats": [
         "OpenAPI 3.x"
+      ],
+      "specs": [
+        "OpenAPI 3.0",
+        "OpenAPI 3.1",
+        "OpenAPI 3.2"
       ],
       "functions": [
         "pattern"
@@ -3678,6 +4071,12 @@
         "OpenAPI 3.0.x",
         "OpenAPI 3.1.x",
         "OpenAPI 3.2.x"
+      ],
+      "specs": [
+        "OpenAPI 2.0",
+        "OpenAPI 3.0",
+        "OpenAPI 3.1",
+        "OpenAPI 3.2"
       ],
       "functions": [
         "serverVariables"
@@ -3716,6 +4115,11 @@
       "formats": [
         "OpenAPI 3.x"
       ],
+      "specs": [
+        "OpenAPI 3.0",
+        "OpenAPI 3.1",
+        "OpenAPI 3.2"
+      ],
       "functions": [
         "oasUnusedComponent"
       ],
@@ -3746,6 +4150,11 @@
       "severity": "error",
       "formats": [
         "OpenAPI 3.x"
+      ],
+      "specs": [
+        "OpenAPI 3.0",
+        "OpenAPI 3.1",
+        "OpenAPI 3.2"
       ],
       "functions": [
         "oasExample"
@@ -3781,6 +4190,11 @@
       "severity": "error",
       "formats": [
         "OpenAPI 3.x"
+      ],
+      "specs": [
+        "OpenAPI 3.0",
+        "OpenAPI 3.1",
+        "OpenAPI 3.2"
       ],
       "functions": [
         "oasExample"
@@ -3822,6 +4236,12 @@
         "OpenAPI 3.1.x",
         "OpenAPI 3.2.x"
       ],
+      "specs": [
+        "OpenAPI 2.0",
+        "OpenAPI 3.0",
+        "OpenAPI 3.1",
+        "OpenAPI 3.2"
+      ],
       "functions": [
         "schema"
       ],
@@ -3856,6 +4276,12 @@
         "OpenAPI 3.0.x",
         "OpenAPI 3.1.x",
         "OpenAPI 3.2.x"
+      ],
+      "specs": [
+        "OpenAPI 2.0",
+        "OpenAPI 3.0",
+        "OpenAPI 3.1",
+        "OpenAPI 3.2"
       ],
       "functions": [
         "alphabetical"
@@ -3892,6 +4318,12 @@
         "OpenAPI 3.1.x",
         "OpenAPI 3.2.x"
       ],
+      "specs": [
+        "OpenAPI 2.0",
+        "OpenAPI 3.0",
+        "OpenAPI 3.1",
+        "OpenAPI 3.2"
+      ],
       "functions": [
         "uniquenessTags"
       ],
@@ -3927,6 +4359,12 @@
         "OpenAPI 3.1.x",
         "OpenAPI 3.2.x"
       ],
+      "specs": [
+        "OpenAPI 2.0",
+        "OpenAPI 3.0",
+        "OpenAPI 3.1",
+        "OpenAPI 3.2"
+      ],
       "functions": [
         "truthy"
       ],
@@ -3958,6 +4396,11 @@
       "formats": [
         "OpenAPI 3.x"
       ],
+      "specs": [
+        "OpenAPI 3.0",
+        "OpenAPI 3.1",
+        "OpenAPI 3.2"
+      ],
       "functions": [
         "defined"
       ],
@@ -3984,6 +4427,11 @@
       "severity": "warn",
       "formats": [
         "OpenAPI 3.x"
+      ],
+      "specs": [
+        "OpenAPI 3.0",
+        "OpenAPI 3.1",
+        "OpenAPI 3.2"
       ],
       "functions": [
         "casing"
@@ -4015,6 +4463,12 @@
         "OpenAPI 3.0.x",
         "OpenAPI 3.1.x",
         "OpenAPI 3.2.x"
+      ],
+      "specs": [
+        "OpenAPI 2.0",
+        "OpenAPI 3.0",
+        "OpenAPI 3.1",
+        "OpenAPI 3.2"
       ],
       "functions": [
         "truthy"
@@ -4051,6 +4505,12 @@
         "OpenAPI 3.1.x",
         "OpenAPI 3.2.x"
       ],
+      "specs": [
+        "OpenAPI 2.0",
+        "OpenAPI 3.0",
+        "OpenAPI 3.1",
+        "OpenAPI 3.2"
+      ],
       "functions": [
         "oasOpIdUnique"
       ],
@@ -4085,6 +4545,12 @@
         "OpenAPI 3.0.x",
         "OpenAPI 3.1.x",
         "OpenAPI 3.2.x"
+      ],
+      "specs": [
+        "OpenAPI 2.0",
+        "OpenAPI 3.0",
+        "OpenAPI 3.1",
+        "OpenAPI 3.2"
       ],
       "functions": [
         "pattern"
@@ -4121,6 +4587,12 @@
         "OpenAPI 3.1.x",
         "OpenAPI 3.2.x"
       ],
+      "specs": [
+        "OpenAPI 2.0",
+        "OpenAPI 3.0",
+        "OpenAPI 3.1",
+        "OpenAPI 3.2"
+      ],
       "functions": [
         "oasOpParams"
       ],
@@ -4155,6 +4627,12 @@
         "OpenAPI 3.0.x",
         "OpenAPI 3.1.x",
         "OpenAPI 3.2.x"
+      ],
+      "specs": [
+        "OpenAPI 2.0",
+        "OpenAPI 3.0",
+        "OpenAPI 3.1",
+        "OpenAPI 3.2"
       ],
       "functions": [
         "length"
@@ -4191,6 +4669,12 @@
         "OpenAPI 3.1.x",
         "OpenAPI 3.2.x"
       ],
+      "specs": [
+        "OpenAPI 2.0",
+        "OpenAPI 3.0",
+        "OpenAPI 3.1",
+        "OpenAPI 3.2"
+      ],
       "functions": [
         "oasOpSuccessResponse"
       ],
@@ -4222,6 +4706,11 @@
       "formats": [
         "OpenAPI 3.x"
       ],
+      "specs": [
+        "OpenAPI 3.0",
+        "OpenAPI 3.1",
+        "OpenAPI 3.2"
+      ],
       "functions": [
         "truthy"
       ],
@@ -4252,6 +4741,12 @@
         "OpenAPI 3.0.x",
         "OpenAPI 3.1.x",
         "OpenAPI 3.2.x"
+      ],
+      "specs": [
+        "OpenAPI 2.0",
+        "OpenAPI 3.0",
+        "OpenAPI 3.1",
+        "OpenAPI 3.2"
       ],
       "functions": [
         "oasTagDefined"
@@ -4288,6 +4783,12 @@
         "OpenAPI 3.1.x",
         "OpenAPI 3.2.x"
       ],
+      "specs": [
+        "OpenAPI 2.0",
+        "OpenAPI 3.0",
+        "OpenAPI 3.1",
+        "OpenAPI 3.2"
+      ],
       "functions": [
         "schema"
       ],
@@ -4322,6 +4823,12 @@
         "OpenAPI 3.0.x",
         "OpenAPI 3.1.x",
         "OpenAPI 3.2.x"
+      ],
+      "specs": [
+        "OpenAPI 2.0",
+        "OpenAPI 3.0",
+        "OpenAPI 3.1",
+        "OpenAPI 3.2"
       ],
       "functions": [
         "pattern"
@@ -4358,6 +4865,12 @@
         "OpenAPI 3.1.x",
         "OpenAPI 3.2.x"
       ],
+      "specs": [
+        "OpenAPI 2.0",
+        "OpenAPI 3.0",
+        "OpenAPI 3.1",
+        "OpenAPI 3.2"
+      ],
       "functions": [
         "pattern"
       ],
@@ -4392,6 +4905,12 @@
         "OpenAPI 3.0.x",
         "OpenAPI 3.1.x",
         "OpenAPI 3.2.x"
+      ],
+      "specs": [
+        "OpenAPI 2.0",
+        "OpenAPI 3.0",
+        "OpenAPI 3.1",
+        "OpenAPI 3.2"
       ],
       "functions": [
         "pattern"
@@ -4428,6 +4947,12 @@
         "OpenAPI 3.1.x",
         "OpenAPI 3.2.x"
       ],
+      "specs": [
+        "OpenAPI 2.0",
+        "OpenAPI 3.0",
+        "OpenAPI 3.1",
+        "OpenAPI 3.2"
+      ],
       "functions": [
         "oasPathParam"
       ],
@@ -4459,6 +4984,11 @@
       "formats": [
         "OpenAPI 3.x"
       ],
+      "specs": [
+        "OpenAPI 3.0",
+        "OpenAPI 3.1",
+        "OpenAPI 3.2"
+      ],
       "functions": [
         "pattern"
       ],
@@ -4489,6 +5019,12 @@
         "OpenAPI 3.0.x",
         "OpenAPI 3.1.x",
         "OpenAPI 3.2.x"
+      ],
+      "specs": [
+        "OpenAPI 2.0",
+        "OpenAPI 3.0",
+        "OpenAPI 3.1",
+        "OpenAPI 3.2"
       ],
       "functions": [
         "truthy"
@@ -4524,6 +5060,12 @@
         "OpenAPI 3.0.x",
         "OpenAPI 3.1.x",
         "OpenAPI 3.2.x"
+      ],
+      "specs": [
+        "OpenAPI 2.0",
+        "OpenAPI 3.0",
+        "OpenAPI 3.1",
+        "OpenAPI 3.2"
       ],
       "functions": [
         "typedEnum"

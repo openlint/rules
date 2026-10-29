@@ -13,6 +13,8 @@ recommended: true
 severity: error
 formats:
   - AsyncAPI 2.x
+specs:
+  - AsyncAPI 2.x
 functions:
   - serverVariables
 properties:

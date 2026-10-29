@@ -13,6 +13,8 @@ recommended: true
 severity: error
 formats:
   - Arazzo 1.0.x
+specs:
+  - Arazzo 1.0
 functions:
   - arazzoStepParametersValidation
 properties:

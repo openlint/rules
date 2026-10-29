@@ -15,6 +15,8 @@ recommended: true
 severity: warn
 formats:
   - OpenAPI 3.2.x
+specs:
+  - OpenAPI 3.2
 functions:
   - schema
 properties:

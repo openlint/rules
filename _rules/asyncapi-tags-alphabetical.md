@@ -13,6 +13,8 @@ recommended: false
 severity: warn
 formats:
   - AsyncAPI 2.x
+specs:
+  - AsyncAPI 2.x
 functions:
   - alphabetical
 properties:

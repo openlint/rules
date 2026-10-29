@@ -28,6 +28,19 @@ const BUILTIN = [
   { key: 'asyncapi', id: 'spectral:asyncapi', name: 'AsyncAPI', doc: 'asyncapi-rules', src: 'packages/rulesets/src/asyncapi/index.ts' },
   { key: 'arazzo', id: 'spectral:arazzo', name: 'Arazzo', doc: 'arazzo-rules', src: 'packages/rulesets/src/arazzo/index.ts' },
 ];
+// Format names -> the specification versions a rule applies to; "OpenAPI 3.x" covers every 3.x.
+const SPECS = ['OpenAPI 2.0', 'OpenAPI 3.0', 'OpenAPI 3.1', 'OpenAPI 3.2', 'AsyncAPI 2.x', 'AsyncAPI 3.x', 'Arazzo 1.0'];
+function specs(formats) {
+  const out = new Set();
+  for (const f of formats) {
+    if (/^OpenAPI 2/.test(f)) out.add('OpenAPI 2.0');
+    else if (f === 'OpenAPI 3.x') ['OpenAPI 3.0', 'OpenAPI 3.1', 'OpenAPI 3.2'].forEach((x) => out.add(x));
+    else if (/^OpenAPI 3\.(\d)/.test(f)) out.add(`OpenAPI 3.${f.match(/^OpenAPI 3\.(\d)/)[1]}`);
+    else if (/^AsyncAPI [23]/.test(f)) out.add(f.match(/^AsyncAPI \d\.x/)[0]);
+    else if (/^Arazzo 1/.test(f)) out.add('Arazzo 1.0');
+  }
+  return SPECS.filter((x) => out.has(x));
+}
 const SEVERITY = ['error', 'warn', 'info', 'hint'];
 const METHODS = /^(get|put|post|delete|options|head|patch|trace|query)$/;
 
@@ -172,6 +185,7 @@ for (const b of BUILTIN) {
       recommended: rule.recommended !== false,
       severity: severityName(rule.severity),
       formats: [...new Set(formats)],
+      specs: specs(formats),
       functions: fns(rule),
       properties: properties(slug, rule, rs.aliases),
       given: plain(rule.given),
@@ -202,6 +216,7 @@ for (const f of fs.existsSync(srcDir) ? fs.readdirSync(srcDir).filter((x) => /\.
       recommended: rule.recommended !== false,
       severity: severityName(rule.severity),
       formats: doc.formats || [],
+      specs: specs(doc.formats || []),
       functions: fns(rule),
       properties: properties(slug, rule, doc.aliases),
       given: rule.given,

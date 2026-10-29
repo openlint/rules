@@ -13,8 +13,8 @@ layout: default
   <dd>{% if r.given.first %}{% for g in r.given %}<code>{{ g | escape }}</code>{% unless forloop.last %}<br>{% endunless %}{% endfor %}{% else %}<code>{{ r.given | escape }}</code>{% endif %}</dd>
   <dt>Function</dt>
   <dd>{% for f in r.functions %}<code>{{ f }}</code>{% unless forloop.last %}, {% endunless %}{% endfor %}</dd>
-  {% if r.formats.size > 0 %}<dt>Formats</dt>
-  <dd>{{ r.formats | join: ', ' }}</dd>{% endif %}
+  {% if r.specs.size > 0 %}<dt>Specs</dt>
+  <dd>{% for x in r.specs %}<a class="prop" href="/?spec={{ x | url_encode }}">{{ x }}</a>{% unless forloop.last %} {% endunless %}{% endfor %}</dd>{% endif %}
   {% if r.message %}<dt>Message</dt>
   <dd><code>{{ r.message | escape }}</code></dd>{% endif %}
 </dl>
