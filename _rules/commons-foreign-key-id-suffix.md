@@ -4,16 +4,16 @@ title: commons-foreign-key-id-suffix
 permalink: /commons-foreign-key-id-suffix/
 summary: >-
   A reference to another resource is named <resource>_id (company_id, owner_id).
-  camelCase ...Id is used by 68 providers and snake_case _id by 59; the commons
-  keeps snake_case for consistency with commons-property-snake-case.
+  snake_case _id is used by 165 providers and camelCase ...Id by 162; the
+  commons keeps snake_case, consistent with commons-property-snake-case.
 slug: commons-foreign-key-id-suffix
 source: api-commons
 ruleset: null
 rulesetName: API Commons Naming
 description: >-
   A reference to another resource is named <resource>_id (company_id, owner_id).
-  camelCase ...Id is used by 68 providers and snake_case _id by 59; the commons
-  keeps snake_case for consistency with commons-property-snake-case.
+  snake_case _id is used by 165 providers and camelCase ...Id by 162; the
+  commons keeps snake_case, consistent with commons-property-snake-case.
 message: '{{property}} is a reference; the common form is <resource>_id.'
 recommended: false
 severity: info
@@ -33,8 +33,8 @@ definition: |-
     commons-foreign-key-id-suffix:
       description: >-
         A reference to another resource is named <resource>_id (company_id,
-        owner_id). camelCase ...Id is used by 68 providers and snake_case _id by
-        59; the commons keeps snake_case for consistency with
+        owner_id). snake_case _id is used by 165 providers and camelCase ...Id by
+        162; the commons keeps snake_case, consistent with
         commons-property-snake-case.
       message: '{{property}} is a reference; the common form is <resource>_id.'
       severity: info
@@ -51,7 +51,7 @@ links:
 ---
 
 {% raw %}
-Part of the API Commons naming ruleset, which the common schema in every API Commons bounded context is written to (https://github.com/api-commons/schema-commons). The counts are providers, not files, with duplicate catalog listings folded: 236 providers across the CRM and help desk contexts, read from OpenAPI the providers published themselves. They are regenerated into evidence/naming.yml each time a context is added. Opt-in, not recommended by default.
+Part of the API Commons naming ruleset, which the common schema in every API Commons bounded context is written to (https://github.com/api-commons/schema-commons). The counts are providers, not files, with duplicate catalog listings folded: 620 providers across the CRM, help desk and commerce contexts, read from OpenAPI the providers published themselves. They are re-measured and rendered into the ruleset each time a context is added. Opt-in, not recommended by default.
 
-Tested with Spectral 6.15.0: the common CRM and help desk OpenAPI documents are clean, and Pipedrive's published v2 OpenAPI is flagged where its names differ from the common vocabulary (add_time and update_time, /activityFields).
+Tested with Spectral 6.15.0: the common CRM, help desk and commerce OpenAPI documents are clean, and Pipedrive's published v2 OpenAPI is flagged where its names differ from the common vocabulary (add_time and update_time, /activityFields).
 {% endraw %}
