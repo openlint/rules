@@ -3,17 +3,17 @@ layout: rule
 title: commons-timestamp-at-suffix
 permalink: /commons-timestamp-at-suffix/
 summary: >-
-  Timestamps end in _at (created_at, updated_at). 349 providers use the _at
-  form, 130 a bare created/updated, 89 a _date, _time or "on" suffix (createdon,
-  add_time).
+  Timestamps end in _at (created_at, updated_at). 380 providers use the _at
+  form, 152 a bare created/updated, 109 a _date, _time or "on" suffix
+  (createdon, add_time).
 slug: commons-timestamp-at-suffix
 source: api-commons
 ruleset: null
 rulesetName: API Commons Naming
 description: >-
-  Timestamps end in _at (created_at, updated_at). 349 providers use the _at
-  form, 130 a bare created/updated, 89 a _date, _time or "on" suffix (createdon,
-  add_time).
+  Timestamps end in _at (created_at, updated_at). 380 providers use the _at
+  form, 152 a bare created/updated, 109 a _date, _time or "on" suffix
+  (createdon, add_time).
 message: >-
   {{property}} looks like a timestamp; the common form is created_at /
   updated_at.
@@ -34,8 +34,8 @@ definition: |-
   rules:
     commons-timestamp-at-suffix:
       description: >-
-        Timestamps end in _at (created_at, updated_at). 349 providers use the _at
-        form, 130 a bare created/updated, 89 a _date, _time or "on" suffix
+        Timestamps end in _at (created_at, updated_at). 380 providers use the _at
+        form, 152 a bare created/updated, 109 a _date, _time or "on" suffix
         (createdon, add_time).
       message: >-
         {{property}} looks like a timestamp; the common form is created_at /
@@ -55,7 +55,7 @@ links:
 ---
 
 {% raw %}
-Part of the API Commons naming ruleset, which the common schema in every API Commons bounded context is written to (https://github.com/api-commons/schema-commons). The counts are providers, not files, with duplicate listings and shared specifications folded: 1258 providers across the CRM, help desk, commerce, payments and card issuing contexts, read from OpenAPI the providers published themselves. They are re-measured and rendered into the ruleset each time a context is added. Opt-in, not recommended by default.
+Part of the API Commons naming ruleset, which the common schema in every API Commons bounded context is written to (https://github.com/api-commons/schema-commons). The counts are providers, not files, with duplicate listings and shared specifications folded: 1383 providers across six contexts (CRM, help desk, commerce, payments, card issuing, billing), read from OpenAPI the providers published themselves. They are re-measured and rendered into the ruleset each time a context is added. Opt-in, not recommended by default.
 
-Tested with Spectral 6.15.0: the five common OpenAPI documents are clean, and Pipedrive's published v2 OpenAPI is flagged where its names differ from the common vocabulary (add_time and update_time, /activityFields).
+Tested with Spectral 6.15.0: the six common OpenAPI documents are clean, and Pipedrive's published v2 OpenAPI is flagged where its names differ from the common vocabulary (add_time and update_time, /activityFields).
 {% endraw %}

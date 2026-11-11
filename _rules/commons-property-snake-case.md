@@ -4,9 +4,9 @@ title: commons-property-snake-case
 permalink: /commons-property-snake-case/
 summary: >-
   Property names are snake_case. Single-word names (id, name, email) are the
-  most common form of all (811 providers) and satisfy every convention. Among
-  multi-word names the market is evenly split -- camelCase 432 providers,
-  snake_case 413 -- so the count cannot decide it. The commons uses snake_case
+  most common form of all (894 providers) and satisfy every convention. Among
+  multi-word names the market is evenly split -- camelCase 478 providers,
+  snake_case 453 -- so the count cannot decide it. The commons uses snake_case
   because it has one spelling for an acronym (customer_id, never customerID or
   customerId) and the crosswalk carries camelCase names without loss. A
   decision, recorded as one.
@@ -16,9 +16,9 @@ ruleset: null
 rulesetName: API Commons Naming
 description: >-
   Property names are snake_case. Single-word names (id, name, email) are the
-  most common form of all (811 providers) and satisfy every convention. Among
-  multi-word names the market is evenly split -- camelCase 432 providers,
-  snake_case 413 -- so the count cannot decide it. The commons uses snake_case
+  most common form of all (894 providers) and satisfy every convention. Among
+  multi-word names the market is evenly split -- camelCase 478 providers,
+  snake_case 453 -- so the count cannot decide it. The commons uses snake_case
   because it has one spelling for an acronym (customer_id, never customerID or
   customerId) and the crosswalk carries camelCase names without loss. A
   decision, recorded as one.
@@ -41,9 +41,9 @@ definition: |-
     commons-property-snake-case:
       description: >-
         Property names are snake_case. Single-word names (id, name, email) are the
-        most common form of all (811 providers) and satisfy every convention.
-        Among multi-word names the market is evenly split -- camelCase 432
-        providers, snake_case 413 -- so the count cannot decide it. The commons
+        most common form of all (894 providers) and satisfy every convention.
+        Among multi-word names the market is evenly split -- camelCase 478
+        providers, snake_case 453 -- so the count cannot decide it. The commons
         uses snake_case because it has one spelling for an acronym (customer_id,
         never customerID or customerId) and the crosswalk carries camelCase names
         without loss. A decision, recorded as one.
@@ -61,7 +61,7 @@ links:
 ---
 
 {% raw %}
-Part of the API Commons naming ruleset, which the common schema in every API Commons bounded context is written to (https://github.com/api-commons/schema-commons). The counts are providers, not files, with duplicate listings and shared specifications folded: 1258 providers across the CRM, help desk, commerce, payments and card issuing contexts, read from OpenAPI the providers published themselves. They are re-measured and rendered into the ruleset each time a context is added. Opt-in, not recommended by default.
+Part of the API Commons naming ruleset, which the common schema in every API Commons bounded context is written to (https://github.com/api-commons/schema-commons). The counts are providers, not files, with duplicate listings and shared specifications folded: 1383 providers across six contexts (CRM, help desk, commerce, payments, card issuing, billing), read from OpenAPI the providers published themselves. They are re-measured and rendered into the ruleset each time a context is added. Opt-in, not recommended by default.
 
-Tested with Spectral 6.15.0: the five common OpenAPI documents are clean, and Pipedrive's published v2 OpenAPI is flagged where its names differ from the common vocabulary (add_time and update_time, /activityFields).
+Tested with Spectral 6.15.0: the six common OpenAPI documents are clean, and Pipedrive's published v2 OpenAPI is flagged where its names differ from the common vocabulary (add_time and update_time, /activityFields).
 {% endraw %}
