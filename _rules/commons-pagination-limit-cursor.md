@@ -3,8 +3,8 @@ layout: rule
 title: commons-pagination-limit-cursor
 permalink: /commons-pagination-limit-cursor/
 summary: >-
-  Page with limit and cursor. limit is the most common paging parameter (51
-  providers), ahead of page (49) and page_size (38); cursor (25) is the most
+  Page with limit and cursor. limit is the most common paging parameter (87
+  providers), ahead of page (71) and page_size (57); cursor (45) is the most
   common continuation token. Offset paging is fine; this flags the long tail of
   synonyms.
 slug: commons-pagination-limit-cursor
@@ -12,8 +12,8 @@ source: api-commons
 ruleset: null
 rulesetName: API Commons Naming
 description: >-
-  Page with limit and cursor. limit is the most common paging parameter (51
-  providers), ahead of page (49) and page_size (38); cursor (25) is the most
+  Page with limit and cursor. limit is the most common paging parameter (87
+  providers), ahead of page (71) and page_size (57); cursor (45) is the most
   common continuation token. Offset paging is fine; this flags the long tail of
   synonyms.
 message: '{{value}} is a paging synonym; the common pair is limit + cursor.'
@@ -34,8 +34,8 @@ definition: |-
   rules:
     commons-pagination-limit-cursor:
       description: >-
-        Page with limit and cursor. limit is the most common paging parameter (51
-        providers), ahead of page (49) and page_size (38); cursor (25) is the most
+        Page with limit and cursor. limit is the most common paging parameter (87
+        providers), ahead of page (71) and page_size (57); cursor (45) is the most
         common continuation token. Offset paging is fine; this flags the long tail
         of synonyms.
       message: '{{value}} is a paging synonym; the common pair is limit + cursor.'
@@ -53,7 +53,7 @@ links:
 ---
 
 {% raw %}
-Part of the API Commons naming ruleset, which the common schema in every API Commons bounded context is written to (https://github.com/api-commons/schema-commons). The counts are providers, not files: 134 providers tagged CRM in APIs.io, 1,155 OpenAPI documents the providers published themselves. Opt-in, not recommended by default.
+Part of the API Commons naming ruleset, which the common schema in every API Commons bounded context is written to (https://github.com/api-commons/schema-commons). The counts are providers, not files, with duplicate catalog listings folded: 236 providers across the CRM and help desk contexts, read from OpenAPI the providers published themselves. They are regenerated into evidence/naming.yml each time a context is added. Opt-in, not recommended by default.
 
-Tested with Spectral 6.15.0: the common CRM OpenAPI (api-commons/crm openapi.yml) is clean, and Pipedrive's published v2 OpenAPI is flagged where its names differ from the common vocabulary (add_time and update_time, /activityFields).
+Tested with Spectral 6.15.0: the common CRM and help desk OpenAPI documents are clean, and Pipedrive's published v2 OpenAPI is flagged where its names differ from the common vocabulary (add_time and update_time, /activityFields).
 {% endraw %}
