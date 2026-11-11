@@ -4,18 +4,18 @@ title: commons-path-param-snake-case
 permalink: /commons-path-param-snake-case/
 summary: >-
   Path parameters are snake_case and name the thing they identify
-  ({contact_id}). A bare {id} is the most common single form (960 providers) and
-  passes; camelCase (761) leads snake_case (574) among multi-word names, so this
-  is info, not a warning.
+  ({contact_id}). A bare {id} is the most common single form (3110 providers)
+  and passes; camelCase (2431) and snake_case (1787) are both common among
+  multi-word names, so this is info, not a warning.
 slug: commons-path-param-snake-case
 source: api-commons
 ruleset: null
 rulesetName: API Commons Naming
 description: >-
   Path parameters are snake_case and name the thing they identify
-  ({contact_id}). A bare {id} is the most common single form (960 providers) and
-  passes; camelCase (761) leads snake_case (574) among multi-word names, so this
-  is info, not a warning.
+  ({contact_id}). A bare {id} is the most common single form (3110 providers)
+  and passes; camelCase (2431) and snake_case (1787) are both common among
+  multi-word names, so this is info, not a warning.
 message: 'Path {{property}} has a parameter that is not snake_case.'
 recommended: false
 severity: info
@@ -35,9 +35,9 @@ definition: |-
     commons-path-param-snake-case:
       description: >-
         Path parameters are snake_case and name the thing they identify
-        ({contact_id}). A bare {id} is the most common single form (960 providers)
-        and passes; camelCase (761) leads snake_case (574) among multi-word names,
-        so this is info, not a warning.
+        ({contact_id}). A bare {id} is the most common single form (3110
+        providers) and passes; camelCase (2431) and snake_case (1787) are both
+        common among multi-word names, so this is info, not a warning.
       message: 'Path {{property}} has a parameter that is not snake_case.'
       severity: info
       given: $.paths
@@ -53,7 +53,7 @@ links:
 ---
 
 {% raw %}
-Part of the API Commons naming ruleset, which the common schema in every API Commons bounded context is written to (https://github.com/api-commons/schema-commons). The counts are providers, not files, with duplicate listings and shared specifications folded: 1651 providers across seven contexts (CRM, help desk, commerce, payments, card issuing, billing, messaging), read from OpenAPI the providers published themselves. They are re-measured and rendered into the ruleset each time a context is added. Opt-in, not recommended by default.
+Part of the API Commons naming ruleset, which the common schema in every API Commons bounded context is written to (https://github.com/api-commons/schema-commons). The counts are providers, not files, with duplicate listings and shared specifications folded: 5,552 providers across 57 bounded contexts, read from OpenAPI the providers published themselves. They are re-measured and rendered into the ruleset each time a context is added. Opt-in, not recommended by default.
 
-Tested with Spectral 6.15.0: the seven common OpenAPI documents are clean, and Pipedrive's published v2 OpenAPI is flagged where its names differ from the common vocabulary (add_time and update_time, /activityFields).
+Tested with Spectral 6.15.0: all 57 common OpenAPI documents are clean, and Pipedrive's published v2 OpenAPI is flagged where its names differ from the common vocabulary (add_time and update_time, /activityFields).
 {% endraw %}
